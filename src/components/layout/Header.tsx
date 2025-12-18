@@ -8,6 +8,7 @@ const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   { name: "Academics", path: "/academics" },
+  { name: "Services", path: "/services" },
   { name: "Events", path: "/events" },
   { name: "News & Blog", path: "/news" },
   { name: "Contact", path: "/contact" },
@@ -53,7 +54,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant="gold" size="sm">
+            <Button variant="sky" size="sm">
               Apply Now
             </Button>
           </div>
@@ -92,7 +93,7 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button variant="gold" className="mt-2">
+              <Button variant="sky" className="mt-2">
                 Apply Now
               </Button>
             </nav>

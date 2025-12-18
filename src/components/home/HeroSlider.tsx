@@ -139,7 +139,7 @@ const HeroSlider = () => {
                 {slides[currentSlide].description}
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button variant="gold" size="lg">
+                <Button variant="sky" size="lg">
                   Explore Programs
                 </Button>
                 <Button variant="hero" size="lg">

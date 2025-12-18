@@ -179,7 +179,7 @@ const Events = () => {
                       </div>
                     </div>
                   </div>
-                  <Button variant={event.featured ? "gold" : "default"} className="shrink-0">
+                  <Button variant={event.featured ? "sky" : "default"} className="shrink-0">
                     Register Now
                   </Button>
                 </div>

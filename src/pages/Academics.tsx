@@ -225,7 +225,7 @@ const Academics = () => {
               Contact us to learn more about enrollment.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button variant="gold" size="lg">
+              <Button variant="sky" size="lg">
                 Apply Now
               </Button>
               <Button variant="hero" size="lg">
