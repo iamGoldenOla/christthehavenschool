@@ -272,7 +272,7 @@ const About = () => {
               and discover why we are the choice for quality education.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button variant="gold" size="lg">
+              <Button variant="sky" size="lg">
                 Apply for Admission
               </Button>
               <Button variant="hero" size="lg">

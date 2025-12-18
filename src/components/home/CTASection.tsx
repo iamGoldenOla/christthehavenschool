@@ -26,7 +26,7 @@ const CTASection = () => {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Button variant="gold" size="lg">
+            <Button variant="sky" size="lg">
               Apply for Admission
             </Button>
             <Button variant="hero" size="lg">

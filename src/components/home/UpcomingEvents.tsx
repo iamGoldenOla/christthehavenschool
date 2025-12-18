@@ -101,7 +101,7 @@ const UpcomingEvents = () => {
                 </div>
               </div>
               
-              <Button variant="gold" size="lg">
+              <Button variant="sky" size="lg">
                 Register Now
               </Button>
             </div>

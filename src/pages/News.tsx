@@ -158,7 +158,7 @@ const News = () => {
                 <p className="text-body mb-6">
                   {article.excerpt}
                 </p>
-                <Button variant="gold">
+                <Button variant="sky">
                   Read Full Article
                   <ArrowRight size={18} />
                 </Button>
@@ -253,7 +253,7 @@ const News = () => {
                 placeholder="Enter your email"
                 className="flex-1 px-6 py-3 rounded-xl bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:outline-none focus:border-secondary"
               />
-              <Button variant="gold">
+              <Button variant="sky">
                 Subscribe
               </Button>
             </form>

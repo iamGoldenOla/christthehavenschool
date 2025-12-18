@@ -170,7 +170,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button variant="gold" className="w-full" size="lg">
+                <Button variant="sky" className="w-full" size="lg">
                   Send Message
                   <Send size={18} />
                 </Button>
