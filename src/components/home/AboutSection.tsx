@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { GraduationCap, Users, Award, BookOpen } from "lucide-react";
 
 const stats = [
-  { icon: GraduationCap, value: "25+", label: "Years of Excellence" },
-  { icon: Users, value: "2,500+", label: "Students Enrolled" },
+  { icon: GraduationCap, value: "10+", label: "Years of Excellence" },
+  { icon: Users, value: "100+", label: "Students Enrolled" },
   { icon: Award, value: "98%", label: "Success Rate" },
-  { icon: BookOpen, value: "150+", label: "Qualified Teachers" },
+  { icon: BookOpen, value: "15+", label: "Qualified Teachers" },
 ];
 
 const AboutSection = () => {
@@ -27,22 +27,24 @@ const AboutSection = () => {
               Shaping <span className="text-secondary">Tomorrow's Leaders</span> Today
             </h2>
             <p className="text-body mb-6">
-              Christ The Haven School is a premier educational institution committed to 
-              providing world-class education in a nurturing environment. Since our 
-              establishment, we have been dedicated to developing well-rounded individuals 
-              who excel academically, morally, and socially.
+              Christ The Haven School is a premier Nursery and Primary educational institution 
+              located in Ogun State, Nigeria. We are committed to providing quality education 
+              in a nurturing environment rooted in strong moral values and godliness.
+            </p>
+            <p className="text-body mb-4">
+              <span className="font-semibold text-yellow">School Motto: Excellence & Godliness</span>
             </p>
             <p className="text-body mb-8">
               Our holistic approach to education combines rigorous academic programs with 
               character development, ensuring our students are prepared for the challenges 
-              of the 21st century while maintaining strong ethical values.
+              of tomorrow while maintaining strong ethical values.
             </p>
 
             {/* Values */}
             <div className="grid grid-cols-2 gap-4">
-              {["Academic Excellence", "Character Building", "Innovation", "Community Service"].map((value) => (
+              {["Academic Excellence", "Character Building", "Innovation", "Godliness"].map((value) => (
                 <div key={value} className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-secondary" />
+                  <div className="w-2 h-2 rounded-full bg-yellow" />
                   <span className="text-sm font-medium text-foreground">{value}</span>
                 </div>
               ))}
@@ -64,10 +66,10 @@ const AboutSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-lg transition-shadow"
+                className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-lg transition-shadow border-l-4 border-yellow"
               >
-                <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mb-4">
-                  <stat.icon className="text-secondary" size={28} />
+                <div className="w-14 h-14 rounded-xl bg-yellow/10 flex items-center justify-center mb-4">
+                  <stat.icon className="text-yellow" size={28} />
                 </div>
                 <h3 className="font-serif text-3xl font-bold text-foreground mb-1">
                   {stat.value}

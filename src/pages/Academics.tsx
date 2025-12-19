@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { BookOpen, Microscope, Laptop, Music, Palette, Trophy, Globe, Users } from "lucide-react";
+import { BookOpen, Music, Palette, Trophy, Laptop, Users, Sparkles } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 const programs = [
   {
     icon: BookOpen,
-    title: "Early Years (Ages 3-5)",
+    title: "Nursery / Early Years (Ages 2-5)",
     description: "Foundation for lifelong learning through play-based education and early literacy programs.",
     features: ["Play-Based Learning", "Early Literacy", "Social Skills Development"],
   },
@@ -17,27 +17,18 @@ const programs = [
     description: "Building strong academic foundations with engaging, student-centered teaching methods.",
     features: ["Core Curriculum", "Character Education", "Creative Arts"],
   },
-  {
-    icon: Microscope,
-    title: "Middle School (Ages 12-14)",
-    description: "Preparing students for advanced studies with enhanced academic rigor and exploration.",
-    features: ["Advanced Sciences", "Language Arts", "Technology Integration"],
-  },
-  {
-    icon: Globe,
-    title: "High School (Ages 15-18)",
-    description: "College preparation with diverse course offerings and career guidance programs.",
-    features: ["AP Courses", "College Counseling", "Career Exploration"],
-  },
 ];
 
 const extracurriculars = [
-  { icon: Microscope, title: "STEM Club", description: "Robotics, coding, and scientific research" },
+  { icon: Trophy, title: "Chess Club", description: "Strategic thinking and mental development" },
+  { icon: Music, title: "Ballet", description: "Grace, discipline, and physical fitness" },
   { icon: Music, title: "Music & Drama", description: "Orchestra, choir, and theatrical productions" },
-  { icon: Palette, title: "Visual Arts", description: "Painting, sculpture, and digital design" },
-  { icon: Trophy, title: "Sports", description: "Football, basketball, athletics, and more" },
-  { icon: Laptop, title: "Technology", description: "Coding club, app development, and AI" },
-  { icon: Globe, title: "Model UN", description: "International affairs and diplomacy" },
+  { icon: Palette, title: "Visual Arts", description: "Painting, drawing, and creative expression" },
+  { icon: Trophy, title: "Sports", description: "Football, athletics, and more" },
+];
+
+const comingSoon = [
+  { icon: Laptop, title: "Technology & STEM", description: "Coding, robotics, and digital skills - Coming Soon!" },
 ];
 
 const Academics = () => {
@@ -55,7 +46,10 @@ const Academics = () => {
           >
             <h1 className="heading-display mb-4">Academics</h1>
             <p className="text-lg opacity-90">
-              Comprehensive educational programs designed for 21st-century success
+              Comprehensive educational programs for Nursery and Primary students
+            </p>
+            <p className="text-yellow font-semibold mt-4">
+              School Motto: Excellence & Godliness
             </p>
           </motion.div>
         </div>
@@ -70,19 +64,19 @@ const Academics = () => {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-16"
           >
-            <span className="text-secondary font-medium text-sm uppercase tracking-wider">
+            <span className="text-yellow font-medium text-sm uppercase tracking-wider">
               Our Programs
             </span>
             <h2 className="heading-section text-foreground mt-3 mb-4">
               Academic <span className="text-secondary">Programs</span>
             </h2>
             <p className="text-body">
-              From early years through high school, we offer comprehensive programs 
+              From nursery through primary school, we offer comprehensive programs 
               tailored to each developmental stage.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {programs.map((program, index) => (
               <motion.div
                 key={program.title}
@@ -90,10 +84,10 @@ const Academics = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-card rounded-2xl p-8 shadow-card hover:shadow-card-lg transition-all"
+                className="bg-card rounded-2xl p-8 shadow-card hover:shadow-card-lg transition-all border-t-4 border-yellow"
               >
-                <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mb-4">
-                  <program.icon className="text-secondary" size={28} />
+                <div className="w-14 h-14 rounded-xl bg-yellow/10 flex items-center justify-center mb-4">
+                  <program.icon className="text-yellow" size={28} />
                 </div>
                 <h3 className="font-serif text-xl font-bold text-foreground mb-2">
                   {program.title}
@@ -102,7 +96,7 @@ const Academics = () => {
                 <ul className="space-y-2">
                   {program.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2 text-sm">
-                      <div className="w-2 h-2 rounded-full bg-secondary" />
+                      <div className="w-2 h-2 rounded-full bg-yellow" />
                       <span className="text-foreground">{feature}</span>
                     </li>
                   ))}
@@ -122,29 +116,29 @@ const Academics = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-secondary font-medium text-sm uppercase tracking-wider">
+              <span className="text-yellow font-medium text-sm uppercase tracking-wider">
                 Curriculum
               </span>
               <h2 className="heading-section text-foreground mt-3 mb-6">
-                21st Century <span className="text-secondary">Learning</span>
+                Quality <span className="text-secondary">Learning</span>
               </h2>
               <p className="text-body mb-6">
                 Our curriculum is designed to develop critical thinking, creativity, 
-                collaboration, and communication skills essential for success in the modern world.
+                and communication skills essential for success.
               </p>
               
               <div className="space-y-4">
                 {[
-                  "Project-Based Learning",
-                  "STEM Integration Across Subjects",
-                  "Digital Literacy Programs",
-                  "Global Perspectives & Cultural Studies",
-                  "Social-Emotional Learning",
-                  "Environmental Sustainability Education",
+                  "Nigerian National Curriculum",
+                  "Character & Moral Education",
+                  "Creative Arts & Music",
+                  "Physical Education",
+                  "Social Studies",
+                  "Religious Studies",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center">
-                      <span className="text-secondary-foreground text-xs">✓</span>
+                    <div className="w-6 h-6 rounded-full bg-yellow flex items-center justify-center">
+                      <span className="text-primary text-xs font-bold">✓</span>
                     </div>
                     <span className="text-foreground">{item}</span>
                   </div>
@@ -176,7 +170,7 @@ const Academics = () => {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-16"
           >
-            <span className="text-secondary font-medium text-sm uppercase tracking-wider">
+            <span className="text-yellow font-medium text-sm uppercase tracking-wider">
               Beyond The Classroom
             </span>
             <h2 className="heading-section text-foreground mt-3 mb-4">
@@ -198,12 +192,38 @@ const Academics = () => {
                 transition={{ delay: index * 0.1 }}
                 className="group bg-card rounded-2xl p-6 shadow-card hover:shadow-card-lg transition-all hover:-translate-y-1"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors">
-                  <activity.icon className="text-primary-foreground group-hover:text-secondary-foreground" size={24} />
+                <div className="w-12 h-12 rounded-xl bg-yellow/10 flex items-center justify-center mb-4 group-hover:bg-yellow transition-colors">
+                  <activity.icon className="text-yellow group-hover:text-primary" size={24} />
                 </div>
                 <h3 className="font-serif text-lg font-bold text-foreground mb-2">
                   {activity.title}
                 </h3>
+                <p className="text-sm text-muted-foreground">{activity.description}</p>
+              </motion.div>
+            ))}
+            
+            {/* Coming Soon */}
+            {comingSoon.map((activity, index) => (
+              <motion.div
+                key={activity.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: (extracurriculars.length + index) * 0.1 }}
+                className="group bg-card rounded-2xl p-6 shadow-card border-2 border-dashed border-yellow/50"
+              >
+                <div className="w-12 h-12 rounded-xl bg-yellow/10 flex items-center justify-center mb-4">
+                  <activity.icon className="text-yellow" size={24} />
+                </div>
+                <div className="flex items-center gap-2 mb-2">
+                  <h3 className="font-serif text-lg font-bold text-foreground">
+                    {activity.title}
+                  </h3>
+                  <span className="flex items-center gap-1 px-2 py-0.5 bg-yellow/10 text-yellow text-xs rounded-full">
+                    <Sparkles size={12} />
+                    Coming Soon
+                  </span>
+                </div>
                 <p className="text-sm text-muted-foreground">{activity.description}</p>
               </motion.div>
             ))}
@@ -225,11 +245,11 @@ const Academics = () => {
               Contact us to learn more about enrollment.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button variant="sky" size="lg">
+              <Button className="bg-yellow text-primary hover:bg-yellow-dark" size="lg">
                 Apply Now
               </Button>
               <Button variant="hero" size="lg">
-                Download Curriculum Guide
+                Contact Us
               </Button>
             </div>
           </motion.div>

@@ -1,17 +1,15 @@
 import { motion } from "framer-motion";
 import { 
-  GraduationCap, 
-  Users, 
-  Award, 
-  BookOpen, 
   Target, 
   Eye,
   Heart,
-  Star
+  Star,
+  Users
 } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
+import proprietressImage from "@/assets/proprietress.jpg";
 
 const values = [
   {
@@ -21,8 +19,8 @@ const values = [
   },
   {
     icon: Heart,
-    title: "Integrity",
-    description: "Acting with honesty, transparency, and moral uprightness in all situations.",
+    title: "Godliness",
+    description: "Nurturing spiritual growth and moral uprightness in all situations.",
   },
   {
     icon: Users,
@@ -33,27 +31,6 @@ const values = [
     icon: Star,
     title: "Innovation",
     description: "Embracing creativity and new ideas to enhance learning experiences.",
-  },
-];
-
-const leadership = [
-  {
-    name: "Dr. Sarah Mitchell",
-    role: "Principal",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
-    bio: "With over 25 years in education, Dr. Mitchell leads Christ The Haven with a vision for academic excellence.",
-  },
-  {
-    name: "Prof. James Okonkwo",
-    role: "Vice Principal, Academics",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    bio: "Prof. Okonkwo oversees curriculum development and academic programs.",
-  },
-  {
-    name: "Mrs. Grace Adebayo",
-    role: "Vice Principal, Administration",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
-    bio: "Mrs. Adebayo manages school operations and student affairs.",
   },
 ];
 
@@ -74,6 +51,9 @@ const About = () => {
             <p className="text-lg opacity-90">
               Discover the legacy of excellence at Christ The Haven School
             </p>
+            <p className="text-yellow font-semibold mt-4">
+              School Motto: Excellence & Godliness
+            </p>
           </motion.div>
         </div>
       </section>
@@ -87,27 +67,27 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-secondary font-medium text-sm uppercase tracking-wider">
+              <span className="text-yellow font-medium text-sm uppercase tracking-wider">
                 Our Story
               </span>
               <h2 className="heading-section text-foreground mt-3 mb-6">
                 A Legacy of <span className="text-secondary">Excellence</span>
               </h2>
               <p className="text-body mb-6">
-                Founded in 1999, Christ The Haven School began with a vision to provide 
-                quality education rooted in strong moral values. What started as a small 
-                institution with just 50 students has grown into one of the region's 
-                most prestigious educational establishments.
+                Christ The Haven School is a premier Nursery and Primary educational 
+                institution located in Ogun State, Nigeria. We are committed to providing 
+                quality education in a nurturing environment rooted in strong moral values 
+                and godliness.
               </p>
               <p className="text-body mb-6">
-                Over the past 25 years, we have consistently maintained high academic 
+                Over the years, we have consistently maintained high academic 
                 standards while nurturing well-rounded individuals who excel not just 
                 in academics but in character, creativity, and community service.
               </p>
               <p className="text-body">
-                Today, with over 2,500 students and 150 dedicated educators, we continue 
+                Today, with over 100 students and 15+ dedicated educators, we continue 
                 to uphold our founding principles while embracing modern educational 
-                innovations to prepare our students for the challenges of the 21st century.
+                innovations to prepare our students for the challenges of tomorrow.
               </p>
             </motion.div>
             
@@ -122,8 +102,8 @@ const About = () => {
                 alt="School building"
                 className="rounded-2xl shadow-card-lg"
               />
-              <div className="absolute -bottom-6 -left-6 bg-secondary text-secondary-foreground p-6 rounded-2xl shadow-lg">
-                <p className="font-serif text-4xl font-bold">25+</p>
+              <div className="absolute -bottom-6 -left-6 bg-yellow text-primary p-6 rounded-2xl shadow-lg">
+                <p className="font-serif text-4xl font-bold">10+</p>
                 <p className="text-sm">Years of Excellence</p>
               </div>
             </motion.div>
@@ -131,8 +111,60 @@ const About = () => {
         </div>
       </section>
 
-      {/* Vision & Mission */}
+      {/* Proprietress Section */}
       <section className="section-padding bg-muted">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto mb-12"
+          >
+            <span className="text-yellow font-medium text-sm uppercase tracking-wider">
+              Leadership
+            </span>
+            <h2 className="heading-section text-foreground mt-3">
+              Meet Our <span className="text-secondary">Proprietress</span>
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="bg-card rounded-3xl p-8 md:p-12 shadow-card-lg grid md:grid-cols-2 gap-8 items-center">
+              <div className="relative">
+                <img
+                  src={proprietressImage}
+                  alt="Mrs Bisola Toriola - Proprietress"
+                  className="w-full h-auto rounded-2xl shadow-lg border-4 border-yellow"
+                />
+              </div>
+              <div>
+                <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-2">
+                  Mrs Bisola Toriola
+                </h3>
+                <p className="text-yellow font-semibold mb-4">Proprietress</p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  With a passion for education and child development, Mrs Bisola Toriola 
+                  founded Christ The Haven School with a vision to provide quality education 
+                  rooted in excellence and godliness.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Under her dedicated leadership, the school has grown to become a 
+                  beacon of academic excellence and moral values in Ogun State, Nigeria, 
+                  nurturing young minds to become future leaders.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Vision & Mission */}
+      <section className="section-padding bg-background">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
@@ -141,8 +173,8 @@ const About = () => {
               viewport={{ once: true }}
               className="bg-primary text-primary-foreground rounded-2xl p-8 md:p-12"
             >
-              <div className="w-16 h-16 rounded-xl bg-secondary flex items-center justify-center mb-6">
-                <Eye className="text-secondary-foreground" size={32} />
+              <div className="w-16 h-16 rounded-xl bg-yellow flex items-center justify-center mb-6">
+                <Eye className="text-primary" size={32} />
               </div>
               <h3 className="font-serif text-2xl font-bold mb-4">Our Vision</h3>
               <p className="opacity-90 leading-relaxed">
@@ -157,10 +189,10 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-card rounded-2xl p-8 md:p-12 shadow-card"
+              className="bg-card rounded-2xl p-8 md:p-12 shadow-card border-t-4 border-yellow"
             >
-              <div className="w-16 h-16 rounded-xl bg-accent flex items-center justify-center mb-6">
-                <Target className="text-secondary" size={32} />
+              <div className="w-16 h-16 rounded-xl bg-yellow/10 flex items-center justify-center mb-6">
+                <Target className="text-yellow" size={32} />
               </div>
               <h3 className="font-serif text-2xl font-bold text-foreground mb-4">Our Mission</h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -174,7 +206,7 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-muted">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -182,7 +214,7 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-16"
           >
-            <span className="text-secondary font-medium text-sm uppercase tracking-wider">
+            <span className="text-yellow font-medium text-sm uppercase tracking-wider">
               What We Stand For
             </span>
             <h2 className="heading-section text-foreground mt-3">
@@ -200,8 +232,8 @@ const About = () => {
                 transition={{ delay: index * 0.1 }}
                 className="text-center bg-card rounded-2xl p-8 shadow-card hover:shadow-card-lg transition-all"
               >
-                <div className="w-16 h-16 rounded-xl bg-accent flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="text-secondary" size={32} />
+                <div className="w-16 h-16 rounded-xl bg-yellow/10 flex items-center justify-center mx-auto mb-4">
+                  <value.icon className="text-yellow" size={32} />
                 </div>
                 <h3 className="font-serif text-xl font-bold text-foreground mb-2">
                   {value.title}
@@ -209,49 +241,6 @@ const About = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {value.description}
                 </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section className="section-padding bg-muted">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-16"
-          >
-            <span className="text-secondary font-medium text-sm uppercase tracking-wider">
-              Our Team
-            </span>
-            <h2 className="heading-section text-foreground mt-3">
-              School <span className="text-secondary">Leadership</span>
-            </h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {leadership.map((leader, index) => (
-              <motion.div
-                key={leader.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center bg-card rounded-2xl p-8 shadow-card"
-              >
-                <img
-                  src={leader.image}
-                  alt={leader.name}
-                  className="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-secondary"
-                />
-                <h3 className="font-serif text-xl font-bold text-foreground mb-1">
-                  {leader.name}
-                </h3>
-                <p className="text-secondary font-medium text-sm mb-3">{leader.role}</p>
-                <p className="text-sm text-muted-foreground">{leader.bio}</p>
               </motion.div>
             ))}
           </div>
@@ -272,7 +261,7 @@ const About = () => {
               and discover why we are the choice for quality education.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button variant="sky" size="lg">
+              <Button className="bg-yellow text-primary hover:bg-yellow-dark" size="lg">
                 Apply for Admission
               </Button>
               <Button variant="hero" size="lg">

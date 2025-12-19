@@ -1,25 +1,18 @@
 import { motion } from "framer-motion";
 import { 
-  Laptop, 
   Microscope, 
   Palette, 
   Music, 
   Trophy, 
-  Globe,
-  BookOpen,
+  Activity,
   Users
 } from "lucide-react";
 
 const features = [
   {
-    icon: Laptop,
-    title: "Digital Learning",
-    description: "Smart classrooms with interactive boards and digital resources",
-  },
-  {
     icon: Microscope,
     title: "STEM Education",
-    description: "Modern science labs for hands-on learning experiences",
+    description: "Modern science learning for hands-on educational experiences",
   },
   {
     icon: Palette,
@@ -29,22 +22,17 @@ const features = [
   {
     icon: Music,
     title: "Music & Drama",
-    description: "Professional music rooms and performing arts facilities",
+    description: "Music rooms and performing arts facilities for expression",
   },
   {
     icon: Trophy,
     title: "Sports Excellence",
-    description: "World-class sports facilities and professional coaching",
+    description: "Quality sports facilities and coaching programs",
   },
   {
-    icon: Globe,
-    title: "Global Exposure",
-    description: "International exchange programs and global partnerships",
-  },
-  {
-    icon: BookOpen,
-    title: "Rich Library",
-    description: "Extensive collection of books and digital learning resources",
+    icon: Activity,
+    title: "Extra-curricular Activities",
+    description: "Wide range of activities including clubs and competitions",
   },
   {
     icon: Users,
@@ -64,20 +52,20 @@ const FeaturesSection = () => {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-secondary font-medium text-sm uppercase tracking-wider">
+          <span className="text-yellow font-medium text-sm uppercase tracking-wider">
             Why Choose Us
           </span>
           <h2 className="heading-section text-foreground mt-3 mb-4">
-            21st Century <span className="text-secondary">Learning</span> Experience
+            Quality <span className="text-secondary">Learning</span> Experience
           </h2>
           <p className="text-body">
-            We provide a comprehensive educational experience with state-of-the-art 
+            We provide a comprehensive educational experience with quality 
             facilities and innovative programs designed for the modern learner.
           </p>
         </motion.div>
 
         {/* Features Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -87,8 +75,8 @@ const FeaturesSection = () => {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className="group bg-card rounded-2xl p-6 shadow-card hover:shadow-card-lg transition-all hover:-translate-y-1"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors">
-                <feature.icon className="text-primary-foreground group-hover:text-secondary-foreground" size={28} />
+              <div className="w-14 h-14 rounded-xl bg-yellow/10 flex items-center justify-center mb-4 group-hover:bg-yellow transition-colors">
+                <feature.icon className="text-yellow group-hover:text-primary" size={28} />
               </div>
               <h3 className="font-serif text-lg font-bold text-foreground mb-2">
                 {feature.title}

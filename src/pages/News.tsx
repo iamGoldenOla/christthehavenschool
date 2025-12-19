@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Calendar, ArrowRight, Search, Tag } from "lucide-react";
+import { Calendar, ArrowRight, Search, Bell, Megaphone } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -8,30 +8,30 @@ import { Button } from "@/components/ui/button";
 const newsArticles = [
   {
     id: 1,
-    title: "Students Excel at National Science Olympiad",
-    excerpt: "Our students brought home 5 gold medals and 3 silver medals at the prestigious National Science Olympiad held in the capital. This remarkable achievement showcases the dedication of our students and the excellence of our science program.",
-    content: "Lorem ipsum dolor sit amet...",
-    date: "December 15, 2024",
-    category: "Achievement",
-    image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=500&fit=crop",
+    title: "End of Year Party - A Memorable Celebration!",
+    excerpt: "What a fantastic way to wrap up the school year! On Wednesday, 10th December 2025, our school premises came alive with joy, laughter, and celebration. The children danced to upbeat music, enjoyed delicious treats, and had an absolutely wonderful time together. It was a day filled with fun activities that left beautiful memories for everyone.",
+    content: "Full article content here...",
+    date: "December 10, 2025",
+    category: "Celebration",
+    image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&h=500&fit=crop",
     featured: true,
   },
   {
     id: 2,
-    title: "New STEM Lab Inauguration",
-    excerpt: "Christ The Haven School inaugurates state-of-the-art STEM laboratory with cutting-edge robotics and AI equipment. The new facility will enhance hands-on learning experiences for students.",
-    content: "Lorem ipsum dolor sit amet...",
-    date: "December 10, 2024",
-    category: "Facilities",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=500&fit=crop",
+    title: "School Concert - A Glorious Evening!",
+    excerpt: "Thursday, 11th December 2025 marked the peak of our term's extracurricular activities. The concert kicked off at 4:30 PM at Starizo Event Centre, where parents, friends, and families gathered for this glorious celebration. The evening was a magnificent showcase of our students' talents, marking the birth of our Lord Jesus Christ with songs, dances, and dramatic performances.",
+    content: "Full article content here...",
+    date: "December 11, 2025",
+    category: "Concert",
+    image: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&h=500&fit=crop",
     featured: false,
   },
   {
     id: 3,
     title: "Annual Sports Day Celebration",
-    excerpt: "Students showcase their athletic prowess at the annual inter-house sports competition with record-breaking performances. The event was a testament to the physical education program at our school.",
-    content: "Lorem ipsum dolor sit amet...",
-    date: "December 5, 2024",
+    excerpt: "Students showcase their athletic prowess at the annual inter-house sports competition with amazing performances. The event was a testament to the physical education program at our school.",
+    content: "Full article content here...",
+    date: "December 5, 2025",
     category: "Sports",
     image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800&h=500&fit=crop",
     featured: false,
@@ -39,36 +39,40 @@ const newsArticles = [
   {
     id: 4,
     title: "Art Exhibition Showcases Student Creativity",
-    excerpt: "The annual art exhibition displayed over 200 artworks created by students from all grade levels, demonstrating the vibrant creative culture at Christ The Haven School.",
-    content: "Lorem ipsum dolor sit amet...",
-    date: "November 28, 2024",
+    excerpt: "The annual art exhibition displayed artworks created by students from all classes, demonstrating the vibrant creative culture at Christ The Haven School.",
+    content: "Full article content here...",
+    date: "November 28, 2025",
     category: "Arts",
     image: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&h=500&fit=crop",
     featured: false,
   },
+];
+
+const informationDesk = [
   {
-    id: 5,
-    title: "Community Service Initiative Launch",
-    excerpt: "Students launch a new community service initiative to support local education. The program aims to provide tutoring and mentorship to underprivileged students in neighboring communities.",
-    content: "Lorem ipsum dolor sit amet...",
-    date: "November 20, 2024",
-    category: "Community",
-    image: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&h=500&fit=crop",
-    featured: false,
+    id: 1,
+    title: "Second Term Resumption",
+    message: "School resumes for second term on Monday, January 6th, 2026. All students should be in school by 8:00 AM.",
+    date: "December 2025",
+    type: "Important",
   },
   {
-    id: 6,
-    title: "Teacher Excellence Awards Ceremony",
-    excerpt: "Five outstanding teachers were recognized for their exceptional contributions to education at the annual Teacher Excellence Awards ceremony held in the school auditorium.",
-    content: "Lorem ipsum dolor sit amet...",
-    date: "November 15, 2024",
-    category: "Faculty",
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=500&fit=crop",
-    featured: false,
+    id: 2,
+    title: "Fee Payment Reminder",
+    message: "Parents are reminded to complete school fees payment before resumption. Contact the school office for more information.",
+    date: "December 2025",
+    type: "Reminder",
+  },
+  {
+    id: 3,
+    title: "New School Uniform",
+    message: "New school uniforms are available at the school store. Please ensure your child has the correct uniform for the new term.",
+    date: "December 2025",
+    type: "Notice",
   },
 ];
 
-const categories = ["All", "Achievement", "Facilities", "Sports", "Arts", "Community", "Faculty"];
+const categories = ["All", "Celebration", "Concert", "Sports", "Arts"];
 
 const News = () => {
   return (
@@ -91,6 +95,42 @@ const News = () => {
         </div>
       </section>
 
+      {/* Information Desk */}
+      <section className="py-8 bg-yellow">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex items-center gap-3 mb-6"
+          >
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+              <Megaphone className="text-yellow" size={20} />
+            </div>
+            <h2 className="font-serif text-xl font-bold text-primary">Information Desk</h2>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-3 gap-4">
+            {informationDesk.map((info, index) => (
+              <motion.div
+                key={info.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-primary/10 rounded-xl p-4 border border-primary/20"
+              >
+                <div className="flex items-center gap-2 mb-2">
+                  <Bell size={14} className="text-primary" />
+                  <span className="text-xs font-medium text-primary">{info.type}</span>
+                  <span className="text-xs text-primary/60 ml-auto">{info.date}</span>
+                </div>
+                <h3 className="font-semibold text-primary mb-1">{info.title}</h3>
+                <p className="text-sm text-primary/80">{info.message}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Search & Filter */}
       <section className="py-8 bg-muted border-b border-border">
         <div className="container-custom">
@@ -100,7 +140,7 @@ const News = () => {
               <input
                 type="text"
                 placeholder="Search articles..."
-                className="w-full pl-12 pr-4 py-3 rounded-xl bg-card border border-border focus:outline-none focus:ring-2 focus:ring-ring"
+                className="w-full pl-12 pr-4 py-3 rounded-xl bg-card border border-border focus:outline-none focus:ring-2 focus:ring-yellow"
               />
             </div>
             <div className="flex flex-wrap gap-2">
@@ -109,8 +149,8 @@ const News = () => {
                   key={category}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                     category === "All"
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-card text-foreground hover:bg-accent"
+                      ? "bg-yellow text-primary"
+                      : "bg-card text-foreground hover:bg-yellow/10"
                   }`}
                 >
                   {category}
@@ -138,13 +178,13 @@ const News = () => {
                   alt={article.title}
                   className="w-full h-80 lg:h-96 object-cover"
                 />
-                <span className="absolute top-4 left-4 px-4 py-1 bg-secondary text-secondary-foreground rounded-full text-sm font-medium">
+                <span className="absolute top-4 left-4 px-4 py-1 bg-yellow text-primary rounded-full text-sm font-medium">
                   Featured
                 </span>
               </div>
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="px-3 py-1 bg-accent text-accent-foreground rounded-full text-xs font-medium">
+                  <span className="px-3 py-1 bg-yellow/10 text-yellow rounded-full text-xs font-medium">
                     {article.category}
                   </span>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -158,10 +198,12 @@ const News = () => {
                 <p className="text-body mb-6">
                   {article.excerpt}
                 </p>
-                <Button variant="sky">
-                  Read Full Article
-                  <ArrowRight size={18} />
-                </Button>
+                <Link to={`/news/${article.id}`}>
+                  <Button className="bg-yellow text-primary hover:bg-yellow-dark">
+                    Read Full Article
+                    <ArrowRight size={18} />
+                  </Button>
+                </Link>
               </div>
             </motion.article>
           ))}
@@ -198,7 +240,7 @@ const News = () => {
                     alt={article.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <span className="absolute top-4 left-4 px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-xs font-medium">
+                  <span className="absolute top-4 left-4 px-3 py-1 bg-yellow text-primary rounded-full text-xs font-medium">
                     {article.category}
                   </span>
                 </div>
@@ -215,7 +257,7 @@ const News = () => {
                   </p>
                   <Link 
                     to={`/news/${article.id}`}
-                    className="inline-flex items-center text-sm font-medium text-secondary hover:underline"
+                    className="inline-flex items-center text-sm font-medium text-yellow hover:underline"
                   >
                     Read More
                     <ArrowRight size={14} className="ml-1" />
@@ -227,7 +269,7 @@ const News = () => {
 
           {/* Load More */}
           <div className="text-center mt-12">
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" className="border-yellow text-yellow hover:bg-yellow hover:text-primary">
               Load More Articles
             </Button>
           </div>
@@ -251,9 +293,9 @@ const News = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-6 py-3 rounded-xl bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:outline-none focus:border-secondary"
+                className="flex-1 px-6 py-3 rounded-xl bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:outline-none focus:border-yellow"
               />
-              <Button variant="sky">
+              <Button className="bg-yellow text-primary hover:bg-yellow-dark">
                 Subscribe
               </Button>
             </form>

@@ -6,27 +6,27 @@ import { Button } from "@/components/ui/button";
 const news = [
   {
     id: 1,
-    title: "Students Excel at National Science Olympiad",
-    excerpt: "Our students brought home 5 gold medals and 3 silver medals at the prestigious National Science Olympiad held in the capital.",
-    date: "December 15, 2024",
-    category: "Achievement",
-    image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop",
+    title: "End of Year Party - A Memorable Celebration!",
+    excerpt: "What a fantastic way to wrap up the school year! On Wednesday, 10th December 2025, our school premises came alive with joy, laughter, and celebration. Children danced to upbeat music, enjoyed delicious treats, and had an absolutely wonderful time together.",
+    date: "December 10, 2025",
+    category: "Celebration",
+    image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&h=400&fit=crop",
   },
   {
     id: 2,
-    title: "New STEM Lab Inauguration",
-    excerpt: "Christ The Haven School inaugurates state-of-the-art STEM laboratory with cutting-edge robotics and AI equipment.",
-    date: "December 10, 2024",
-    category: "Facilities",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop",
+    title: "School Concert - A Glorious Evening!",
+    excerpt: "Thursday, 11th December 2025 marked the peak of our term's extracurricular activities. The concert kicked off at 4:30 PM at Starizo Event Centre, where parents, friends, and families gathered to witness this glorious celebration of talent marking the birth of our Lord Jesus Christ.",
+    date: "December 11, 2025",
+    category: "Concert",
+    image: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=600&h=400&fit=crop",
   },
   {
     id: 3,
     title: "Annual Sports Day Celebration",
-    excerpt: "Students showcase their athletic prowess at the annual inter-house sports competition with record-breaking performances.",
-    date: "December 5, 2024",
+    excerpt: "Students showcase their athletic prowess at the annual inter-house sports competition with record-breaking performances. The event was a testament to the physical education program at our school.",
+    date: "December 5, 2025",
     category: "Sports",
-    image: "https://images.unsplash.com/photo-1461896836934- voices?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=600&h=400&fit=crop",
   },
 ];
 
@@ -42,7 +42,7 @@ const NewsPreview = () => {
           className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12"
         >
           <div>
-            <span className="text-secondary font-medium text-sm uppercase tracking-wider">
+            <span className="text-yellow font-medium text-sm uppercase tracking-wider">
               Latest Updates
             </span>
             <h2 className="heading-section text-foreground mt-3">
@@ -50,7 +50,7 @@ const NewsPreview = () => {
             </h2>
           </div>
           <Link to="/news">
-            <Button variant="outline" className="group">
+            <Button variant="outline" className="group border-yellow text-yellow hover:bg-yellow hover:text-primary">
               View All News
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
             </Button>
@@ -74,7 +74,7 @@ const NewsPreview = () => {
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span className="absolute top-4 left-4 px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-xs font-medium">
+                <span className="absolute top-4 left-4 px-3 py-1 bg-yellow text-primary rounded-full text-xs font-medium">
                   {item.category}
                 </span>
               </div>
@@ -91,7 +91,7 @@ const NewsPreview = () => {
                 </p>
                 <Link 
                   to={`/news/${item.id}`}
-                  className="inline-flex items-center text-sm font-medium text-secondary hover:underline"
+                  className="inline-flex items-center text-sm font-medium text-yellow hover:underline"
                 >
                   Read More
                   <ArrowRight size={14} className="ml-1" />
