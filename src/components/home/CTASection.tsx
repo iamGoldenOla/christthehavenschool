@@ -26,7 +26,7 @@ const CTASection = () => {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Button variant="sky" size="lg">
+            <Button variant="yellow" size="lg">
               Apply for Admission
             </Button>
             <Button variant="hero" size="lg">
@@ -36,22 +36,22 @@ const CTASection = () => {
           
           {/* Contact Info */}
           <div className="flex flex-wrap justify-center gap-8">
-            <a href="tel:+12345678900" className="flex items-center gap-3 hover:text-secondary transition-colors">
-              <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center">
-                <Phone size={20} />
+            <a href="tel:+2348023357800" className="flex items-center gap-3 hover:text-yellow transition-colors">
+              <div className="w-12 h-12 rounded-full bg-yellow/20 flex items-center justify-center">
+                <Phone size={20} className="text-yellow" />
               </div>
               <div className="text-left">
                 <p className="text-sm opacity-70">Call Us</p>
-                <p className="font-medium">+1 (234) 567-8900</p>
+                <p className="font-medium">+234 802 335 7800</p>
               </div>
             </a>
-            <a href="mailto:admissions@christthehaven.edu" className="flex items-center gap-3 hover:text-secondary transition-colors">
-              <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center">
-                <Mail size={20} />
+            <a href="mailto:info@christthehavenschool.com" className="flex items-center gap-3 hover:text-yellow transition-colors">
+              <div className="w-12 h-12 rounded-full bg-yellow/20 flex items-center justify-center">
+                <Mail size={20} className="text-yellow" />
               </div>
               <div className="text-left">
                 <p className="text-sm opacity-70">Email Us</p>
-                <p className="font-medium">admissions@christthehaven.edu</p>
+                <p className="font-medium">info@christthehavenschool.com</p>
               </div>
             </a>
           </div>

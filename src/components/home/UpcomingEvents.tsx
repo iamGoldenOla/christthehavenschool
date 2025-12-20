@@ -54,15 +54,15 @@ const UpcomingEvents = () => {
           className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12"
         >
           <div>
-            <span className="text-yellow font-medium text-sm uppercase tracking-wider">
+            <span className="text-secondary font-medium text-sm uppercase tracking-wider">
               Mark Your Calendar
             </span>
             <h2 className="heading-section text-foreground mt-3">
-              Upcoming <span className="text-secondary">Events</span>
+              Upcoming <span className="text-primary">Events</span>
             </h2>
           </div>
           <Link to="/events">
-            <Button variant="outline" className="group border-yellow text-yellow hover:bg-yellow hover:text-primary">
+            <Button variant="outline" className="group border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               View All Events
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
             </Button>
@@ -118,9 +118,9 @@ const UpcomingEvents = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-lg transition-all border-l-4 border-yellow"
+                className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-lg transition-all border-l-4 border-secondary"
               >
-                <span className="inline-block px-3 py-1 bg-yellow/10 text-yellow rounded-full text-xs font-medium mb-3">
+                <span className="inline-block px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-medium mb-3">
                   {event.category}
                 </span>
                 <h4 className="font-serif text-lg font-bold text-foreground mb-2">
@@ -129,7 +129,7 @@ const UpcomingEvents = () => {
                 <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
                   {event.description}
                 </p>
-                <div className="flex items-center gap-2 text-sm text-yellow font-medium">
+                <div className="flex items-center gap-2 text-sm text-primary font-medium">
                   <Sparkles size={14} />
                   <span>{event.status}</span>
                 </div>

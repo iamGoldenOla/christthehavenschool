@@ -42,15 +42,15 @@ const NewsPreview = () => {
           className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12"
         >
           <div>
-            <span className="text-yellow font-medium text-sm uppercase tracking-wider">
+            <span className="text-secondary font-medium text-sm uppercase tracking-wider">
               Latest Updates
             </span>
             <h2 className="heading-section text-foreground mt-3">
-              News & <span className="text-secondary">Blog</span>
+              News & <span className="text-primary">Blog</span>
             </h2>
           </div>
           <Link to="/news">
-            <Button variant="outline" className="group border-yellow text-yellow hover:bg-yellow hover:text-primary">
+            <Button variant="outline" className="group border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               View All News
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
             </Button>
@@ -74,7 +74,7 @@ const NewsPreview = () => {
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span className="absolute top-4 left-4 px-3 py-1 bg-yellow text-primary rounded-full text-xs font-medium">
+                <span className="absolute top-4 left-4 px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-xs font-medium">
                   {item.category}
                 </span>
               </div>
@@ -91,7 +91,7 @@ const NewsPreview = () => {
                 </p>
                 <Link 
                   to={`/news/${item.id}`}
-                  className="inline-flex items-center text-sm font-medium text-yellow hover:underline"
+                  className="inline-flex items-center text-sm font-medium text-primary hover:underline"
                 >
                   Read More
                   <ArrowRight size={14} className="ml-1" />

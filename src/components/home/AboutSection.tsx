@@ -32,7 +32,7 @@ const AboutSection = () => {
               in a nurturing environment rooted in strong moral values and godliness.
             </p>
             <p className="text-body mb-4">
-              <span className="font-semibold text-yellow">School Motto: Excellence & Godliness</span>
+              <span className="font-semibold text-primary">School Motto: Excellence & Godliness</span>
             </p>
             <p className="text-body mb-8">
               Our holistic approach to education combines rigorous academic programs with 
@@ -44,7 +44,7 @@ const AboutSection = () => {
             <div className="grid grid-cols-2 gap-4">
               {["Academic Excellence", "Character Building", "Innovation", "Godliness"].map((value) => (
                 <div key={value} className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-yellow" />
+                  <div className="w-2 h-2 rounded-full bg-secondary" />
                   <span className="text-sm font-medium text-foreground">{value}</span>
                 </div>
               ))}
@@ -66,10 +66,10 @@ const AboutSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-lg transition-shadow border-l-4 border-yellow"
+                className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-lg transition-shadow border-l-4 border-secondary"
               >
-                <div className="w-14 h-14 rounded-xl bg-yellow/10 flex items-center justify-center mb-4">
-                  <stat.icon className="text-yellow" size={28} />
+                <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-4">
+                  <stat.icon className="text-secondary" size={28} />
                 </div>
                 <h3 className="font-serif text-3xl font-bold text-foreground mb-1">
                   {stat.value}

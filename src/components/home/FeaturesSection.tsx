@@ -52,11 +52,11 @@ const FeaturesSection = () => {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-yellow font-medium text-sm uppercase tracking-wider">
+          <span className="text-secondary font-medium text-sm uppercase tracking-wider">
             Why Choose Us
           </span>
           <h2 className="heading-section text-foreground mt-3 mb-4">
-            Quality <span className="text-secondary">Learning</span> Experience
+            Quality <span className="text-primary">Learning</span> Experience
           </h2>
           <p className="text-body">
             We provide a comprehensive educational experience with quality 
@@ -75,8 +75,8 @@ const FeaturesSection = () => {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className="group bg-card rounded-2xl p-6 shadow-card hover:shadow-card-lg transition-all hover:-translate-y-1"
             >
-              <div className="w-14 h-14 rounded-xl bg-yellow/10 flex items-center justify-center mb-4 group-hover:bg-yellow transition-colors">
-                <feature.icon className="text-yellow group-hover:text-primary" size={28} />
+              <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors">
+                <feature.icon className="text-secondary group-hover:text-secondary-foreground" size={28} />
               </div>
               <h3 className="font-serif text-lg font-bold text-foreground mb-2">
                 {feature.title}
