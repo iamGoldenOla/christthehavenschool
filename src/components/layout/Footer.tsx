@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Facebook, Instagram, Youtube } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -10,9 +11,7 @@ const Footer = () => {
           {/* School Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-yellow flex items-center justify-center">
-                <span className="font-serif text-primary font-bold text-lg">CTH</span>
-              </div>
+              <img src={logo} alt="Christ The Haven School Logo" className="w-14 h-14 object-contain bg-white rounded-full p-1" />
               <div>
                 <h3 className="font-serif font-bold text-lg">Christ The Haven</h3>
                 <p className="text-sm opacity-80">School</p>

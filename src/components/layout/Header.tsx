@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -26,9 +27,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-              <span className="font-serif text-primary-foreground font-bold text-lg">CTH</span>
-            </div>
+            <img src={logo} alt="Christ The Haven School Logo" className="w-14 h-14 object-contain" />
             <div className="hidden sm:block">
               <h1 className="font-serif text-primary font-bold text-lg leading-tight">
                 Christ The Haven
