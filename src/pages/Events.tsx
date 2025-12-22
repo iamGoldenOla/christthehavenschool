@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Calendar, MapPin, Clock, ChevronDown } from "lucide-react";
+import { Calendar, MapPin, Clock } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
+import ExcursionCarousel from "@/components/events/ExcursionCarousel";
 
 import excursion1 from "@/assets/gallery/excursion-1.jpg";
 import excursion2 from "@/assets/gallery/excursion-2.jpg";
@@ -242,7 +243,7 @@ const Events = () => {
             ))}
           </div>
 
-          {/* Gallery Grid */}
+          {/* Gallery Display */}
           {galleryCategories.map((category) => (
             category.id === activeCategory && (
               <motion.div
@@ -257,29 +258,38 @@ const Events = () => {
                   </h3>
                   <p className="text-muted-foreground">{category.description}</p>
                 </div>
-                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-                  {category.images.map((image, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="relative group cursor-pointer rounded-2xl overflow-hidden shadow-card"
-                      onClick={() => setSelectedImage(image.src)}
-                    >
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-colors flex items-center justify-center">
-                        <span className="text-primary-foreground font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                          View Image
-                        </span>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
+                
+                {/* Carousel for Excursion, Grid for others */}
+                {category.id === "excursion" ? (
+                  <ExcursionCarousel 
+                    images={category.images} 
+                    onImageClick={(src) => setSelectedImage(src)} 
+                  />
+                ) : (
+                  <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    {category.images.map((image, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: index * 0.1 }}
+                        className="relative group cursor-pointer rounded-2xl overflow-hidden shadow-card"
+                        onClick={() => setSelectedImage(image.src)}
+                      >
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-colors flex items-center justify-center">
+                          <span className="text-primary-foreground font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                            View Image
+                          </span>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                )}
               </motion.div>
             )
           ))}

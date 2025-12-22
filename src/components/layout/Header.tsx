@@ -56,9 +56,11 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant="sky" size="sm">
-              Apply Now
-            </Button>
+            <Link to="/admissions">
+              <Button variant="sky" size="sm">
+                Apply Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -95,9 +97,11 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button variant="sky" className="mt-2">
-                Apply Now
-              </Button>
+              <Link to="/admissions" onClick={() => setIsMenuOpen(false)}>
+                <Button variant="sky" className="mt-2 w-full">
+                  Apply Now
+                </Button>
+              </Link>
             </nav>
           </motion.div>
         )}
