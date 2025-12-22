@@ -7,6 +7,14 @@ import { Button } from "@/components/ui/button";
 
 import excursion1 from "@/assets/gallery/excursion-1.jpg";
 import excursion2 from "@/assets/gallery/excursion-2.jpg";
+import excursion3 from "@/assets/gallery/excursion-3.jpg";
+import excursion4 from "@/assets/gallery/excursion-4.jpg";
+import excursion5 from "@/assets/gallery/excursion-5.jpg";
+import excursion6 from "@/assets/gallery/excursion-6.jpg";
+import excursion7 from "@/assets/gallery/excursion-7.jpg";
+import excursion8 from "@/assets/gallery/excursion-8.jpg";
+import excursion9 from "@/assets/gallery/excursion-9.jpg";
+import excursion10 from "@/assets/gallery/excursion-10.jpg";
 import cultural1 from "@/assets/gallery/cultural-1.jpg";
 import cultural2 from "@/assets/gallery/cultural-2.jpg";
 import reading1 from "@/assets/gallery/reading-1.jpg";
@@ -59,8 +67,16 @@ const galleryCategories = [
     name: "Excursion",
     description: "Educational trips and outdoor learning adventures",
     images: [
-      { src: excursion1, alt: "Students visiting museum on excursion" },
-      { src: excursion2, alt: "Nature trail educational trip" },
+      { src: excursion1, alt: "Students at Olumo Rock excursion" },
+      { src: excursion2, alt: "Cultural exhibition at Obasanjo Zoo" },
+      { src: excursion3, alt: "Students at Alake's Palace" },
+      { src: excursion4, alt: "Students listening attentively at palace" },
+      { src: excursion5, alt: "Royal throne at Alake's Palace" },
+      { src: excursion6, alt: "Group photo at Alake's Palace" },
+      { src: excursion7, alt: "Students seated at palace hall" },
+      { src: excursion8, alt: "Students on ornate chairs" },
+      { src: excursion9, alt: "Students during palace tour" },
+      { src: excursion10, alt: "Group photo at OOPL Wildlife Park" },
     ],
   },
   {
@@ -241,7 +257,7 @@ const Events = () => {
                   </h3>
                   <p className="text-muted-foreground">{category.description}</p>
                 </div>
-                <div className="grid sm:grid-cols-2 gap-6">
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                   {category.images.map((image, index) => (
                     <motion.div
                       key={index}
