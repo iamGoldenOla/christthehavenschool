@@ -13,6 +13,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import ApplicationForm from "@/components/admissions/ApplicationForm";
 
 const admissionSteps = [
   {
@@ -278,8 +279,34 @@ const Admissions = () => {
         </div>
       </section>
 
+      {/* Online Application Form */}
+      <section id="apply-form" className="section-padding bg-background">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="text-secondary font-medium text-sm uppercase tracking-wider">
+              Start Your Application
+            </span>
+            <h2 className="heading-section text-foreground mt-3 mb-4">
+              Apply <span className="text-secondary">Online</span>
+            </h2>
+            <p className="text-body max-w-2xl mx-auto">
+              Complete the form below to submit your application. You'll be prompted to send an email with your details and attach required documents.
+            </p>
+          </motion.div>
+
+          <div className="max-w-3xl mx-auto">
+            <ApplicationForm />
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-muted">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
