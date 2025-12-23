@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import ExcursionCarousel from "@/components/events/ExcursionCarousel";
+import CulturalDayCarousel from "@/components/events/CulturalDayCarousel";
 
 import excursion1 from "@/assets/gallery/excursion-1.jpg";
 import excursion2 from "@/assets/gallery/excursion-2.jpg";
@@ -16,8 +17,16 @@ import excursion7 from "@/assets/gallery/excursion-7.jpg";
 import excursion8 from "@/assets/gallery/excursion-8.jpg";
 import excursion9 from "@/assets/gallery/excursion-9.jpg";
 import excursion10 from "@/assets/gallery/excursion-10.jpg";
-import cultural1 from "@/assets/gallery/cultural-1.jpg";
-import cultural2 from "@/assets/gallery/cultural-2.jpg";
+import culturalDay1 from "@/assets/gallery/cultural-day-1.jpg";
+import culturalDay2 from "@/assets/gallery/cultural-day-2.jpg";
+import culturalDay3 from "@/assets/gallery/cultural-day-3.jpg";
+import culturalDay4 from "@/assets/gallery/cultural-day-4.jpg";
+import culturalDay5 from "@/assets/gallery/cultural-day-5.jpg";
+import culturalDay6 from "@/assets/gallery/cultural-day-6.jpg";
+import culturalDay7 from "@/assets/gallery/cultural-day-7.jpg";
+import culturalDay8 from "@/assets/gallery/cultural-day-8.jpg";
+import culturalDay9 from "@/assets/gallery/cultural-day-9.jpg";
+import culturalDay10 from "@/assets/gallery/cultural-day-10.jpg";
 import reading1 from "@/assets/gallery/reading-1.jpg";
 import reading2 from "@/assets/gallery/reading-2.jpg";
 import professional1 from "@/assets/gallery/professional-1.jpg";
@@ -85,8 +94,16 @@ const galleryCategories = [
     name: "Cultural Day",
     description: "Celebrating diversity through cultural performances and traditions",
     images: [
-      { src: cultural1, alt: "Students in traditional costumes" },
-      { src: cultural2, alt: "Cultural dance performance" },
+      { src: culturalDay1, alt: "Students in traditional Nigerian attire - group photo" },
+      { src: culturalDay2, alt: "Children in colorful cultural costumes" },
+      { src: culturalDay3, alt: "Teachers dressed in traditional attire" },
+      { src: culturalDay4, alt: "Children showcasing traditional outfits" },
+      { src: culturalDay5, alt: "Teacher coordinating cultural activities" },
+      { src: culturalDay6, alt: "Boys in traditional northern attire" },
+      { src: culturalDay7, alt: "Boys greeting in traditional manner" },
+      { src: culturalDay8, alt: "Children in playful traditional poses" },
+      { src: culturalDay9, alt: "Students representing diverse Nigerian cultures" },
+      { src: culturalDay10, alt: "Girls performing traditional dance" },
     ],
   },
   {
@@ -259,9 +276,14 @@ const Events = () => {
                   <p className="text-muted-foreground">{category.description}</p>
                 </div>
                 
-                {/* Carousel for Excursion, Grid for others */}
+                {/* Carousel for Excursion and Cultural Day, Grid for others */}
                 {category.id === "excursion" ? (
                   <ExcursionCarousel 
+                    images={category.images} 
+                    onImageClick={(src) => setSelectedImage(src)} 
+                  />
+                ) : category.id === "cultural" ? (
+                  <CulturalDayCarousel 
                     images={category.images} 
                     onImageClick={(src) => setSelectedImage(src)} 
                   />
