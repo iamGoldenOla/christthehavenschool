@@ -30,6 +30,14 @@ import culturalDay9 from "@/assets/gallery/cultural-day-9.jpg";
 import culturalDay10 from "@/assets/gallery/cultural-day-10.jpg";
 import reading1 from "@/assets/gallery/reading-1.jpg";
 import reading2 from "@/assets/gallery/reading-2.jpg";
+import reading3 from "@/assets/gallery/reading-3.jpg";
+import reading4 from "@/assets/gallery/reading-4.jpg";
+import reading5 from "@/assets/gallery/reading-5.jpg";
+import reading6 from "@/assets/gallery/reading-6.jpg";
+import reading7 from "@/assets/gallery/reading-7.jpg";
+import reading8 from "@/assets/gallery/reading-8.jpg";
+import reading9 from "@/assets/gallery/reading-9.jpg";
+import reading10 from "@/assets/gallery/reading-10.jpg";
 import professional1 from "@/assets/gallery/professional-1.jpg";
 import professional2 from "@/assets/gallery/professional-2.jpg";
 import professional3 from "@/assets/gallery/professional-3.jpg";
@@ -120,8 +128,16 @@ const galleryCategories = [
     name: "World Reading Day",
     description: "Promoting literacy and the joy of reading",
     images: [
-      { src: reading1, alt: "Students reading in library" },
-      { src: reading2, alt: "Storytelling session" },
+      { src: reading1, alt: "Teacher with group of young students" },
+      { src: reading2, alt: "Students gathered around table" },
+      { src: reading3, alt: "Teacher reading to students at table" },
+      { src: reading4, alt: "Teacher reading aloud to class" },
+      { src: reading5, alt: "Storytelling session in classroom" },
+      { src: reading6, alt: "Teacher with students in classroom" },
+      { src: reading7, alt: "Students at desks with teacher" },
+      { src: reading8, alt: "Reading session with students" },
+      { src: reading9, alt: "Parents reading with students" },
+      { src: reading10, alt: "Story time with young students" },
     ],
   },
   {
