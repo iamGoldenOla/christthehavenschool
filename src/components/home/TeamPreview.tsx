@@ -3,6 +3,9 @@ import { ArrowRight, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import proprietressImg from "@/assets/proprietress.jpg";
+import kemiObakpolor from "@/assets/staff/kemi-obakpolor.jpg";
+import blessingJaphet from "@/assets/staff/blessing-japhet.jpg";
+import abiodunOlorunsuyi from "@/assets/staff/abiodun-olorunsuyi.jpg";
 
 const teamMembers = [
   {
@@ -12,21 +15,21 @@ const teamMembers = [
     featured: true,
   },
   {
-    name: "Staff Member",
-    role: "Head Teacher",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
+    name: "Mrs Kemi Obakpolor",
+    role: "School Supervisor",
+    image: kemiObakpolor,
     featured: false,
   },
   {
-    name: "Staff Member",
+    name: "Mrs Blessing Japhet",
     role: "Class Teacher",
-    image: "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=400&h=400&fit=crop",
+    image: blessingJaphet,
     featured: false,
   },
   {
-    name: "Staff Member",
+    name: "Mrs Abiodun Olorunsuyi",
     role: "Class Teacher",
-    image: "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=400&h=400&fit=crop",
+    image: abiodunOlorunsuyi,
     featured: false,
   },
 ];
@@ -62,7 +65,7 @@ const TeamPreview = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {teamMembers.map((member, index) => (
             <motion.div
-              key={member.name + index}
+              key={member.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -71,11 +74,11 @@ const TeamPreview = () => {
                 member.featured ? "ring-2 ring-secondary" : ""
               }`}
             >
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative h-64 overflow-hidden">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
                 {member.featured && (
                   <div className="absolute top-3 left-3">
