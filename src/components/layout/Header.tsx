@@ -71,7 +71,7 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation + CTA */}
           <nav className="hidden lg:flex items-center gap-1" ref={dropdownRef}>
             {navItems.map((item) => (
               <div key={item.name} className="relative">
@@ -132,16 +132,14 @@ const Header = () => {
                 )}
               </div>
             ))}
-          </nav>
-
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Link to="/admissions">
+            
+            {/* CTA Button - now inside nav */}
+            <Link to="/admissions" className="ml-2">
               <Button variant="sky" size="sm">
                 Apply Now
               </Button>
             </Link>
-          </div>
+          </nav>
 
           {/* Mobile Menu Toggle */}
           <button

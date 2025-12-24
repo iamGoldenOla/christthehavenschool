@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 
 import hero1 from "@/assets/hero-1.jpg";
@@ -151,21 +151,6 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      {/* Navigation Arrows - positioned at bottom */}
-      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex items-center gap-6">
-        <button
-          onClick={prevSlide}
-          className="w-10 h-10 rounded-full bg-card/20 backdrop-blur-sm flex items-center justify-center text-primary-foreground hover:bg-card/40 transition-all border border-primary-foreground/20"
-        >
-          <ChevronLeft size={20} />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="w-10 h-10 rounded-full bg-card/20 backdrop-blur-sm flex items-center justify-center text-primary-foreground hover:bg-card/40 transition-all border border-primary-foreground/20"
-        >
-          <ChevronRight size={20} />
-        </button>
-      </div>
 
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">

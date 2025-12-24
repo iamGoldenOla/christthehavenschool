@@ -70,7 +70,17 @@ const comingSoonServices = [
 
 const Services = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen relative">
+      {/* Parallax Background */}
+      <div 
+        className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1920&q=80')",
+          backgroundAttachment: "fixed"
+        }}
+      />
+      <div className="fixed inset-0 -z-10 bg-background/95" />
+      
       <Header />
       
       {/* Hero Section */}
