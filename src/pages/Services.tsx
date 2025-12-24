@@ -79,12 +79,12 @@ const Services = () => {
           backgroundAttachment: "fixed"
         }}
       />
-      <div className="fixed inset-0 -z-10 bg-background/95" />
+      <div className="fixed inset-0 -z-10 bg-background/80" />
       
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 gradient-primary">
+      <section className="pt-32 pb-20 bg-primary/90">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -107,7 +107,7 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="section-padding">
+      <section className="section-padding bg-background/70 backdrop-blur-sm">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (

@@ -15,12 +15,12 @@ const Contact = () => {
           backgroundAttachment: "fixed"
         }}
       />
-      <div className="fixed inset-0 -z-10 bg-background/95" />
+      <div className="fixed inset-0 -z-10 bg-background/80" />
       
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-primary text-primary-foreground">
+      <section className="pt-32 pb-16 bg-primary/90 text-primary-foreground">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -39,7 +39,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Info & Form */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-background/70 backdrop-blur-sm">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Information */}
