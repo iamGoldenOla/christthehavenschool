@@ -160,78 +160,203 @@ const Events = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-primary text-primary-foreground">
-        <div className="container-custom">
+      <section className="pt-32 pb-20 bg-gradient-to-br from-primary via-primary to-navy-dark text-primary-foreground relative overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+          <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-yellow/10 rounded-full blur-3xl" />
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.1 }}
+            transition={{ duration: 1 }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/10 rounded-full"
+          />
+        </div>
+
+        <div className="container-custom relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-3xl mx-auto"
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="heading-display mb-4">Events & Gallery</h1>
-            <p className="text-lg opacity-90">
-              Explore our vibrant school life through events and memorable moments
-            </p>
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6"
+            >
+              <Calendar className="w-4 h-4 text-secondary" />
+              <span className="text-sm font-medium">Mark Your Calendar</span>
+            </motion.div>
+            
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="heading-display mb-6"
+            >
+              Upcoming <span className="text-secondary">Events</span>
+            </motion.h1>
+            
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.9 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="text-lg md:text-xl max-w-2xl mx-auto"
+            >
+              Join us for memorable experiences that inspire, educate, and bring our community together
+            </motion.p>
           </motion.div>
         </div>
       </section>
 
-      {/* Upcoming Events */}
-      <section className="section-padding bg-background">
+      {/* Featured Event */}
+      <section className="py-16 bg-background relative">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-primary via-navy-dark to-primary p-1"
+          >
+            <div className="bg-gradient-to-br from-primary to-navy-dark rounded-[22px] p-8 md:p-12 relative overflow-hidden">
+              {/* Background Pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-secondary rounded-full -translate-y-1/2 translate-x-1/2" />
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-yellow rounded-full translate-y-1/2 -translate-x-1/2" />
+              </div>
+              
+              <div className="relative z-10 grid lg:grid-cols-2 gap-8 items-center">
+                <div>
+                  <motion.span 
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2 }}
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-full text-sm font-semibold mb-6"
+                  >
+                    <span className="w-2 h-2 bg-current rounded-full animate-pulse" />
+                    Featured Event
+                  </motion.span>
+                  
+                  <motion.h2 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 }}
+                    className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4"
+                  >
+                    {upcomingEvents[0].title}
+                  </motion.h2>
+                  
+                  <motion.p 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 0.9 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4 }}
+                    className="text-primary-foreground/90 text-lg mb-6 leading-relaxed"
+                  >
+                    {upcomingEvents[0].description}
+                  </motion.p>
+                  
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.5 }}
+                    className="flex flex-wrap gap-4 mb-8"
+                  >
+                    <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                      <MapPin size={18} className="text-secondary" />
+                      <span className="text-sm text-primary-foreground">{upcomingEvents[0].location}</span>
+                    </div>
+                  </motion.div>
+                  
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.6 }}
+                  >
+                    <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-lg">
+                      Register Now
+                    </Button>
+                  </motion.div>
+                </div>
+                
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4, duration: 0.5 }}
+                  className="hidden lg:flex items-center justify-center"
+                >
+                  <div className="relative">
+                    <div className="w-64 h-64 bg-gradient-to-br from-secondary/30 to-yellow/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                      <div className="w-48 h-48 bg-gradient-to-br from-secondary/40 to-yellow/30 rounded-full flex items-center justify-center">
+                        <Calendar className="w-20 h-20 text-primary-foreground" />
+                      </div>
+                    </div>
+                    <div className="absolute -top-4 -right-4 w-16 h-16 bg-yellow rounded-full flex items-center justify-center shadow-lg">
+                      <span className="font-bold text-primary text-xl">2026</span>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Other Events */}
+      <section className="py-16 bg-muted/50">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12"
+            className="text-center mb-12"
           >
             <span className="text-secondary font-medium text-sm uppercase tracking-wider">
-              Mark Your Calendar
+              More to Explore
             </span>
             <h2 className="heading-section text-foreground mt-3">
-              Upcoming <span className="text-secondary">Events</span>
+              Other <span className="text-secondary">Events</span>
             </h2>
           </motion.div>
 
-          <div className="grid gap-6">
-            {upcomingEvents.map((event, index) => (
+          <div className="grid md:grid-cols-3 gap-6">
+            {upcomingEvents.slice(1).map((event, index) => (
               <motion.div
                 key={event.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`rounded-2xl p-6 md:p-8 ${
-                  event.featured 
-                    ? "bg-primary text-primary-foreground" 
-                    : "bg-card shadow-card"
-                }`}
+                className="group bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-card-lg transition-all duration-300 border-t-4 border-primary"
               >
-                {event.featured && (
-                  <span className="inline-block px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-xs font-medium mb-4">
-                    Featured Event
-                  </span>
-                )}
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <div>
-                    <h3 className={`font-serif text-xl md:text-2xl font-bold mb-2 ${
-                      event.featured ? "" : "text-foreground"
-                    }`}>
-                      {event.title}
-                    </h3>
-                    <p className={`text-sm mb-4 ${
-                      event.featured ? "opacity-90" : "text-muted-foreground"
-                    }`}>
-                      {event.description}
-                    </p>
-                    <div className="flex flex-wrap gap-4 text-sm">
-                      <div className="flex items-center gap-2">
-                        <MapPin size={16} className={event.featured ? "text-secondary" : "text-secondary"} />
-                        <span>{event.location}</span>
-                      </div>
-                    </div>
+                <div className="p-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                    <Calendar className="w-6 h-6 text-secondary group-hover:text-primary-foreground transition-colors" />
                   </div>
-                  <Button variant={event.featured ? "sky" : "default"} className="shrink-0">
-                    Register Now
+                  
+                  <h3 className="font-serif text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                    {event.title}
+                  </h3>
+                  
+                  <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+                    {event.description}
+                  </p>
+                  
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
+                    <MapPin size={14} className="text-secondary" />
+                    <span>{event.location}</span>
+                  </div>
+                  
+                  <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all">
+                    Learn More
                   </Button>
                 </div>
               </motion.div>
