@@ -32,6 +32,14 @@ import reading1 from "@/assets/gallery/reading-1.jpg";
 import reading2 from "@/assets/gallery/reading-2.jpg";
 import professional1 from "@/assets/gallery/professional-1.jpg";
 import professional2 from "@/assets/gallery/professional-2.jpg";
+import professional3 from "@/assets/gallery/professional-3.jpg";
+import professional4 from "@/assets/gallery/professional-4.jpg";
+import professional5 from "@/assets/gallery/professional-5.jpg";
+import professional6 from "@/assets/gallery/professional-6.jpg";
+import professional7 from "@/assets/gallery/professional-7.jpg";
+import professional8 from "@/assets/gallery/professional-8.jpg";
+import professional9 from "@/assets/gallery/professional-9.jpg";
+import professional10 from "@/assets/gallery/professional-10.jpg";
 
 const upcomingEvents = [
   {
@@ -121,8 +129,16 @@ const galleryCategories = [
     name: "Professional Day",
     description: "Career exploration and professional development activities",
     images: [
-      { src: professional1, alt: "Career day with professionals" },
-      { src: professional2, alt: "Students in professional costumes" },
+      { src: professional1, alt: "Students as future footballers" },
+      { src: professional2, alt: "Students and teachers as chefs" },
+      { src: professional3, alt: "Student dressed in engineer outfit" },
+      { src: professional4, alt: "Students with cooking utensils" },
+      { src: professional5, alt: "Students as future pilots" },
+      { src: professional6, alt: "Students in military and pilot uniforms" },
+      { src: professional7, alt: "Students dressed as doctors" },
+      { src: professional8, alt: "Students as future lawyers" },
+      { src: professional9, alt: "Students at career day activities" },
+      { src: professional10, alt: "Student as future pilot" },
     ],
   },
 ];
