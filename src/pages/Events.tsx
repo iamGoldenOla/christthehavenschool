@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import ExcursionCarousel from "@/components/events/ExcursionCarousel";
 import CulturalDayCarousel from "@/components/events/CulturalDayCarousel";
 import EventCarousel from "@/components/events/EventCarousel";
+import heroBg from "@/assets/hero-5.jpg";
 
 import excursion1 from "@/assets/gallery/excursion-1.jpg";
 import excursion2 from "@/assets/gallery/excursion-2.jpg";
@@ -161,17 +162,18 @@ const Events = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-primary via-primary to-navy-dark text-primary-foreground relative overflow-hidden">
+      <section className="pt-32 pb-20 relative overflow-hidden">
+        {/* Hero Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroBg})` }}
+        />
+        <div className="absolute inset-0 bg-primary/85" />
+        
         {/* Decorative Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
           <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-yellow/10 rounded-full blur-3xl" />
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.1 }}
-            transition={{ duration: 1 }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/10 rounded-full"
-          />
         </div>
 
         <div className="container-custom relative z-10">

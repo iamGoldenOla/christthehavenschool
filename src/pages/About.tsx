@@ -51,13 +51,20 @@ const About = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-primary/80 text-primary-foreground backdrop-blur-sm">
-        <div className="container-custom">
+      <section className="pt-32 pb-20 relative overflow-hidden">
+        {/* Hero Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${aboutBg})` }}
+        />
+        <div className="absolute inset-0 bg-primary/85" />
+        
+        <div className="container-custom relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-center max-w-3xl mx-auto text-primary-foreground"
           >
             <motion.h1 
               initial={{ opacity: 0, scale: 0.9 }}

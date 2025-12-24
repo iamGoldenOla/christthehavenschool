@@ -85,27 +85,34 @@ const Services = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-primary/80 backdrop-blur-sm">
-        <div className="container-custom">
+      <section className="pt-32 pb-20 relative overflow-hidden">
+        {/* Hero Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${servicesBg})` }}
+        />
+        <div className="absolute inset-0 bg-primary/85" />
+        
+        <div className="container-custom relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-center"
+            className="text-center text-primary-foreground"
           >
             <motion.h1 
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="heading-display text-primary-foreground mb-6"
+              className="heading-display mb-6"
             >
               Our Services
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0 }}
-              animate={{ opacity: 0.8 }}
+              animate={{ opacity: 0.9 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-primary-foreground text-lg md:text-xl max-w-3xl mx-auto"
+              className="text-lg md:text-xl max-w-3xl mx-auto"
             >
               Comprehensive services designed to support every aspect of your child's 
               educational journey at Christ The Haven School.

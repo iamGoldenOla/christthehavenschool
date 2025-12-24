@@ -11,6 +11,7 @@ import dorisAkalazu from "@/assets/staff/doris-akalazu.jpg";
 import julianaIyedupe from "@/assets/staff/juliana-iyedupe.jpg";
 import modupeOmezi from "@/assets/staff/modupe-omezi.jpg";
 import wunmiAzeez from "@/assets/staff/wunmi-azeez.jpg";
+import heroBg from "@/assets/hero-3.jpg";
 
 const staff = [
   {
@@ -77,12 +78,19 @@ const Staff = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-primary text-primary-foreground">
-        <div className="container-custom">
+      <section className="pt-32 pb-20 relative overflow-hidden">
+        {/* Hero Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroBg})` }}
+        />
+        <div className="absolute inset-0 bg-primary/85" />
+        
+        <div className="container-custom relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-center max-w-3xl mx-auto text-primary-foreground"
           >
             <span className="text-yellow font-medium text-sm uppercase tracking-wider">
               Our Team
