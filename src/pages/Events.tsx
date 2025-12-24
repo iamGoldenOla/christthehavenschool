@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Calendar, MapPin, Clock } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import CTASection from "@/components/home/CTASection";
 import { Button } from "@/components/ui/button";
 import ExcursionCarousel from "@/components/events/ExcursionCarousel";
 import CulturalDayCarousel from "@/components/events/CulturalDayCarousel";
@@ -463,6 +464,7 @@ const Events = () => {
         </div>
       )}
 
+      <CTASection />
       <Footer />
     </main>
   );

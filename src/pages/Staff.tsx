@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Mail, Phone, Award } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import CTASection from "@/components/home/CTASection";
 import proprietressImg from "@/assets/proprietress.jpg";
 import kemiObakpolor from "@/assets/staff/kemi-obakpolor.jpg";
 import blessingJaphet from "@/assets/staff/blessing-japhet.jpg";
@@ -208,6 +209,7 @@ const Staff = () => {
         </div>
       </section>
 
+      <CTASection />
       <Footer />
     </main>
   );
