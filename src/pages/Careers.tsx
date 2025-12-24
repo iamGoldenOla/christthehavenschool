@@ -77,35 +77,51 @@ const Careers = () => {
           backgroundAttachment: "fixed"
         }}
       />
-      <div className="fixed inset-0 -z-10 bg-background/80" />
+      <div className="fixed inset-0 -z-10 bg-background/40" />
       
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-primary/90 text-primary-foreground">
+      <section className="pt-32 pb-16 bg-primary/80 text-primary-foreground backdrop-blur-sm">
         <div className="container-custom">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-center max-w-3xl mx-auto"
           >
-            <span className="text-yellow font-medium text-sm uppercase tracking-wider">
+            <motion.span 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="text-yellow font-medium text-sm uppercase tracking-wider"
+            >
               Join Our Team
-            </span>
-            <h1 className="heading-display mt-4 mb-6">
+            </motion.span>
+            <motion.h1 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="heading-display mt-4 mb-6"
+            >
               Build a <span className="text-yellow">Career</span> with Purpose
-            </h1>
-            <p className="text-lg opacity-90">
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.9 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="text-lg"
+            >
               Join Christ The Haven School and make a difference in the lives of 
               young learners. We're always looking for passionate educators who share 
               our commitment to excellence and godliness.
-            </p>
+            </motion.p>
           </motion.div>
         </div>
       </section>
 
       {/* Why Join Us */}
-      <section className="section-padding bg-background/70 backdrop-blur-sm">
+      <section className="section-padding bg-background/50 backdrop-blur-sm">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -145,7 +161,7 @@ const Careers = () => {
       </section>
 
       {/* Open Positions */}
-      <section className="section-padding bg-muted">
+      <section className="section-padding bg-muted/80 backdrop-blur-sm">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -199,7 +215,7 @@ const Careers = () => {
       </section>
 
       {/* Application Form */}
-      <section className="section-padding bg-primary text-primary-foreground">
+      <section className="section-padding bg-primary/80 text-primary-foreground backdrop-blur-sm">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div

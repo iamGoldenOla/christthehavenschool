@@ -16,31 +16,49 @@ const Contact = () => {
           backgroundAttachment: "fixed"
         }}
       />
-      <div className="fixed inset-0 -z-10 bg-background/80" />
+      <div className="fixed inset-0 -z-10 bg-background/40" />
       
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-primary/90 text-primary-foreground">
+      <section className="pt-32 pb-16 bg-primary/80 text-primary-foreground backdrop-blur-sm">
         <div className="container-custom">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="heading-display mb-4">Contact Us</h1>
-            <p className="text-lg opacity-90">
+            <motion.h1 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="heading-display mb-4"
+            >
+              Contact Us
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.9 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="text-lg"
+            >
               We'd love to hear from you. Get in touch with us today.
-            </p>
-            <p className="text-yellow font-semibold mt-4">
+            </motion.p>
+            <motion.p 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              className="text-yellow font-semibold mt-4"
+            >
               School Motto: Excellence & Godliness
-            </p>
+            </motion.p>
           </motion.div>
         </div>
       </section>
 
       {/* Contact Info & Form */}
-      <section className="section-padding bg-background/70 backdrop-blur-sm">
+      <section className="section-padding bg-background/50 backdrop-blur-sm">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Information */}
@@ -194,7 +212,7 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="h-96 bg-muted">
+      <section className="h-96 bg-muted/80 backdrop-blur-sm">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3!2d3.4!3d6.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDInMDAuMCJOIDPCsDI0JzAwLjAiRQ!5e0!3m2!1sen!2sng!4v1234567890"
           width="100%"

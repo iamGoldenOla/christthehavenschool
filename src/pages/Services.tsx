@@ -80,35 +80,50 @@ const Services = () => {
           backgroundAttachment: "fixed"
         }}
       />
-      <div className="fixed inset-0 -z-10 bg-background/80" />
+      <div className="fixed inset-0 -z-10 bg-background/40" />
       
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-primary/90">
+      <section className="pt-32 pb-20 bg-primary/80 backdrop-blur-sm">
         <div className="container-custom">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-center"
           >
-            <h1 className="heading-display text-primary-foreground mb-6">
+            <motion.h1 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="heading-display text-primary-foreground mb-6"
+            >
               Our Services
-            </h1>
-            <p className="text-primary-foreground/80 text-lg md:text-xl max-w-3xl mx-auto">
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.8 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="text-primary-foreground text-lg md:text-xl max-w-3xl mx-auto"
+            >
               Comprehensive services designed to support every aspect of your child's 
               educational journey at Christ The Haven School.
-            </p>
-            <p className="text-yellow font-semibold mt-4">
+            </motion.p>
+            <motion.p 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              className="text-yellow font-semibold mt-4"
+            >
               School Motto: Excellence & Godliness
-            </p>
+            </motion.p>
           </motion.div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="section-padding bg-background/70 backdrop-blur-sm">
+      <section className="section-padding bg-background/50 backdrop-blur-sm">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -144,7 +159,7 @@ const Services = () => {
       </section>
 
       {/* Clubs Section */}
-      <section className="section-padding bg-muted">
+      <section className="section-padding bg-muted/80 backdrop-blur-sm">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -185,7 +200,7 @@ const Services = () => {
       </section>
 
       {/* Coming Soon Section */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-background/50 backdrop-blur-sm">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -227,7 +242,7 @@ const Services = () => {
       </section>
 
       {/* Additional Services */}
-      <section className="section-padding bg-muted">
+      <section className="section-padding bg-muted/80 backdrop-blur-sm">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -266,7 +281,7 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding gradient-primary">
+      <section className="section-padding gradient-primary backdrop-blur-sm">
         <div className="container-custom text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -46,31 +46,49 @@ const About = () => {
           backgroundAttachment: "fixed"
         }}
       />
-      <div className="fixed inset-0 -z-10 bg-background/80" />
+      <div className="fixed inset-0 -z-10 bg-background/40" />
       
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-primary/90 text-primary-foreground">
+      <section className="pt-32 pb-16 bg-primary/80 text-primary-foreground backdrop-blur-sm">
         <div className="container-custom">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="heading-display mb-4">About Our School</h1>
-            <p className="text-lg opacity-90">
+            <motion.h1 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="heading-display mb-4"
+            >
+              About Our School
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.9 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="text-lg"
+            >
               Discover the legacy of excellence at Christ The Haven School
-            </p>
-            <p className="text-yellow font-semibold mt-4">
+            </motion.p>
+            <motion.p 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              className="text-yellow font-semibold mt-4"
+            >
               School Motto: Excellence & Godliness
-            </p>
+            </motion.p>
           </motion.div>
         </div>
       </section>
 
       {/* History Section */}
-      <section className="section-padding bg-background/70 backdrop-blur-sm">
+      <section className="section-padding bg-background/50 backdrop-blur-sm">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -123,7 +141,7 @@ const About = () => {
       </section>
 
       {/* Proprietress Section */}
-      <section className="section-padding bg-muted">
+      <section className="section-padding bg-muted/80 backdrop-blur-sm">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -175,7 +193,7 @@ const About = () => {
       </section>
 
       {/* Vision & Mission */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-background/50 backdrop-blur-sm">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
@@ -217,7 +235,7 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="section-padding bg-muted">
+      <section className="section-padding bg-muted/80 backdrop-blur-sm">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -259,7 +277,7 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-primary text-primary-foreground">
+      <section className="section-padding bg-primary/80 text-primary-foreground backdrop-blur-sm">
         <div className="container-custom text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
