@@ -67,7 +67,17 @@ const Careers = () => {
   };
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen relative">
+      {/* Parallax Background */}
+      <div 
+        className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80')",
+          backgroundAttachment: "fixed"
+        }}
+      />
+      <div className="fixed inset-0 -z-10 bg-background/95" />
+      
       <Header />
       
       {/* Hero Section */}

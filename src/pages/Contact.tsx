@@ -6,7 +6,17 @@ import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen relative">
+      {/* Parallax Background */}
+      <div 
+        className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1920&q=80')",
+          backgroundAttachment: "fixed"
+        }}
+      />
+      <div className="fixed inset-0 -z-10 bg-background/95" />
+      
       <Header />
       
       {/* Hero Section */}
