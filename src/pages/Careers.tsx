@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import careersBg from "@/assets/parallax/careers-bg.jpg";
 
 const benefits = [
   {
@@ -72,7 +73,7 @@ const Careers = () => {
       <div 
         className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80')",
+          backgroundImage: `url(${careersBg})`,
           backgroundAttachment: "fixed"
         }}
       />

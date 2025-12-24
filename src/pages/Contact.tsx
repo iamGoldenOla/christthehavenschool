@@ -3,6 +3,7 @@ import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
+import contactBg from "@/assets/parallax/contact-bg.jpg";
 
 const Contact = () => {
   return (
@@ -11,7 +12,7 @@ const Contact = () => {
       <div 
         className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1920&q=80')",
+          backgroundImage: `url(${contactBg})`,
           backgroundAttachment: "fixed"
         }}
       />

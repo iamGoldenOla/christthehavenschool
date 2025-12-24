@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import servicesBg from "@/assets/parallax/services-bg.jpg";
 
 const services = [
   {
@@ -75,7 +76,7 @@ const Services = () => {
       <div 
         className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1920&q=80')",
+          backgroundImage: `url(${servicesBg})`,
           backgroundAttachment: "fixed"
         }}
       />
