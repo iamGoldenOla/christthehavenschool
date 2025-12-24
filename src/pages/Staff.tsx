@@ -3,6 +3,13 @@ import { Mail, Phone, Award } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import proprietressImg from "@/assets/proprietress.jpg";
+import kemiObakpolor from "@/assets/staff/kemi-obakpolor.jpg";
+import blessingJaphet from "@/assets/staff/blessing-japhet.jpg";
+import abiodunOlorunsuyi from "@/assets/staff/abiodun-olorunsuyi.jpg";
+import dorisAkalazu from "@/assets/staff/doris-akalazu.jpg";
+import julianaIyedupe from "@/assets/staff/juliana-iyedupe.jpg";
+import modupeOmezi from "@/assets/staff/modupe-omezi.jpg";
+import wunmiAzeez from "@/assets/staff/wunmi-azeez.jpg";
 
 const staff = [
   {
@@ -13,38 +20,52 @@ const staff = [
     featured: true,
   },
   {
-    name: "Staff Member",
-    role: "Head Teacher",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
-    description: "Experienced educator passionate about nurturing young minds.",
+    name: "Mrs Kemi Obakpolor",
+    role: "School Supervisor",
+    image: kemiObakpolor,
+    description: "Experienced supervisor ensuring smooth school operations and academic excellence.",
     featured: false,
   },
   {
-    name: "Staff Member",
+    name: "Mrs Blessing Japhet",
     role: "Class Teacher",
-    image: "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=400&h=400&fit=crop",
-    description: "Dedicated teacher committed to creating engaging learning experiences.",
+    image: blessingJaphet,
+    description: "Dedicated educator passionate about nurturing young minds.",
     featured: false,
   },
   {
-    name: "Staff Member",
+    name: "Mrs Abiodun Olorunsuyi",
     role: "Class Teacher",
-    image: "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=400&h=400&fit=crop",
-    description: "Enthusiastic educator with a love for creative teaching methods.",
+    image: abiodunOlorunsuyi,
+    description: "Enthusiastic teacher committed to creating engaging learning experiences.",
     featured: false,
   },
   {
-    name: "Staff Member",
-    role: "Music Instructor",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop",
-    description: "Talented musician helping students discover their musical potential.",
+    name: "Mrs Doris Akalazu",
+    role: "Class Teacher",
+    image: dorisAkalazu,
+    description: "Caring educator with a heart for child development and learning.",
     featured: false,
   },
   {
-    name: "Staff Member",
-    role: "Administrative Staff",
-    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop",
-    description: "Efficient administrator ensuring smooth school operations.",
+    name: "Mrs Juliana Iyedupe",
+    role: "Class Teacher",
+    image: julianaIyedupe,
+    description: "Creative teacher fostering curiosity and love for learning in students.",
+    featured: false,
+  },
+  {
+    name: "Mrs Modupe Omezi",
+    role: "Class Teacher",
+    image: modupeOmezi,
+    description: "Experienced educator dedicated to academic excellence and moral values.",
+    featured: false,
+  },
+  {
+    name: "Mrs Wunmi Azeez",
+    role: "Class Teacher",
+    image: wunmiAzeez,
+    description: "Passionate teacher inspiring students to reach their full potential.",
     featured: false,
   },
 ];
@@ -152,21 +173,21 @@ const Staff = () => {
             </h2>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {staff.slice(1).map((member, index) => (
               <motion.div
-                key={member.name + index}
+                key={member.name}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-card-lg transition-all group"
               >
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-72 overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
@@ -184,16 +205,6 @@ const Staff = () => {
               </motion.div>
             ))}
           </div>
-
-          {/* Placeholder message */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-center text-muted-foreground mt-8 italic"
-          >
-            * Staff photos and names will be updated with actual team members
-          </motion.p>
         </div>
       </section>
 
