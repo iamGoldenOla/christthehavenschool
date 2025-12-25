@@ -319,7 +319,7 @@ const NewsPost = () => {
                   Enroll Your Child Today!
                 </h4>
                 <p className="text-sm opacity-90 mb-4">
-                  Give your child the best education at GreatStart Academy. Admissions now open for 2026 session.
+                  Give your child the best education at Christ The Haven School. Admissions now open for 2026 session.
                 </p>
                 <Link to="/admissions">
                   <Button variant="sky" size="sm" className="w-full">
