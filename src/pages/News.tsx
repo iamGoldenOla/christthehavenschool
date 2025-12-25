@@ -142,9 +142,9 @@ const News = () => {
               
               const getTypeColor = (type: string) => {
                 switch(type) {
-                  case 'Important': return 'bg-red-500/20 text-red-300 border-red-400/30';
-                  case 'Reminder': return 'bg-yellow/20 text-yellow border-yellow/30';
-                  default: return 'bg-secondary/20 text-secondary border-secondary/30';
+                  case 'Important': return 'bg-red-500/15 text-red-300 border-red-400/20';
+                  case 'Reminder': return 'bg-yellow/15 text-yellow/90 border-yellow/20';
+                  default: return 'bg-blue-500/10 text-blue-300 border-blue-400/20';
                 }
               };
               
