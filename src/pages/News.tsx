@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Calendar, ArrowRight, Search, Bell, Megaphone } from "lucide-react";
+import { Calendar, ArrowRight, Search, Bell, Megaphone, Clock, AlertCircle, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -104,37 +104,93 @@ const News = () => {
       </section>
 
       {/* Information Desk */}
-      <section className="py-8 bg-yellow">
-        <div className="container-custom">
+      <section className="py-16 bg-gradient-to-br from-primary via-primary to-navy-dark relative overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-yellow rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" />
+        </div>
+        
+        <div className="container-custom relative z-10">
+          {/* Header */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="flex items-center gap-3 mb-6"
+            className="text-center mb-12"
           >
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <Megaphone className="text-yellow" size={20} />
+            <div className="inline-flex items-center gap-3 bg-yellow/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6 border border-yellow/30">
+              <div className="w-10 h-10 rounded-full bg-yellow flex items-center justify-center animate-pulse">
+                <Megaphone className="text-primary" size={20} />
+              </div>
+              <h2 className="font-serif text-2xl font-bold text-white">Information Desk</h2>
             </div>
-            <h2 className="font-serif text-xl font-bold text-primary">Information Desk</h2>
+            <p className="text-white/80 max-w-xl mx-auto">
+              Stay informed with the latest announcements and important updates from Christ The Haven School
+            </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-4">
-            {informationDesk.map((info, index) => (
-              <motion.div
-                key={info.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-primary/10 rounded-xl p-4 border border-primary/20"
-              >
-                <div className="flex items-center gap-2 mb-2">
-                  <Bell size={14} className="text-primary" />
-                  <span className="text-xs font-medium text-primary">{info.type}</span>
-                  <span className="text-xs text-primary/60 ml-auto">{info.date}</span>
-                </div>
-                <h3 className="font-semibold text-primary mb-1">{info.title}</h3>
-                <p className="text-sm text-primary/80">{info.message}</p>
-              </motion.div>
-            ))}
+          {/* Information Cards */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {informationDesk.map((info, index) => {
+              const getTypeIcon = (type: string) => {
+                switch(type) {
+                  case 'Important': return <AlertCircle size={18} />;
+                  case 'Reminder': return <Clock size={18} />;
+                  default: return <Info size={18} />;
+                }
+              };
+              
+              const getTypeColor = (type: string) => {
+                switch(type) {
+                  case 'Important': return 'bg-red-500/20 text-red-300 border-red-400/30';
+                  case 'Reminder': return 'bg-yellow/20 text-yellow border-yellow/30';
+                  default: return 'bg-secondary/20 text-secondary border-secondary/30';
+                }
+              };
+              
+              return (
+                <motion.div
+                  key={info.id}
+                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ delay: index * 0.15, duration: 0.5 }}
+                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                  className="group relative bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-yellow/50 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow/10"
+                >
+                  {/* Glow Effect */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-yellow/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  <div className="relative z-10">
+                    {/* Type Badge & Date */}
+                    <div className="flex items-center justify-between mb-4">
+                      <span className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold border ${getTypeColor(info.type)}`}>
+                        {getTypeIcon(info.type)}
+                        {info.type}
+                      </span>
+                      <span className="text-xs text-white/60 font-medium">{info.date}</span>
+                    </div>
+                    
+                    {/* Title */}
+                    <h3 className="font-serif text-xl font-bold text-white mb-3 group-hover:text-yellow transition-colors">
+                      {info.title}
+                    </h3>
+                    
+                    {/* Divider */}
+                    <div className="w-12 h-1 bg-gradient-to-r from-yellow to-secondary rounded-full mb-4" />
+                    
+                    {/* Message */}
+                    <p className="text-white/80 leading-relaxed text-sm">
+                      {info.message}
+                    </p>
+                  </div>
+                  
+                  {/* Corner Decoration */}
+                  <div className="absolute bottom-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity">
+                    <Bell size={40} className="text-yellow" />
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
