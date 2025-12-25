@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Calendar, ArrowRight, Search, Bell, Megaphone, Clock, AlertCircle, Info } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -119,9 +119,6 @@ const News = () => {
             className="text-center mb-12"
           >
             <div className="inline-flex items-center gap-3 bg-yellow/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6 border border-yellow/30">
-              <div className="w-10 h-10 rounded-full bg-yellow flex items-center justify-center animate-pulse">
-                <Megaphone className="text-primary" size={20} />
-              </div>
               <h2 className="font-serif text-2xl font-bold text-white">Information Desk</h2>
             </div>
             <p className="text-white/80 max-w-xl mx-auto">
@@ -132,14 +129,6 @@ const News = () => {
           {/* Information Cards */}
           <div className="grid md:grid-cols-3 gap-6">
             {informationDesk.map((info, index) => {
-              const getTypeIcon = (type: string) => {
-                switch(type) {
-                  case 'Important': return <AlertCircle size={18} />;
-                  case 'Reminder': return <Clock size={18} />;
-                  default: return <Info size={18} />;
-                }
-              };
-              
               const getTypeColor = (type: string) => {
                 switch(type) {
                   case 'Important': return 'bg-red-500/15 text-red-300 border-red-400/20';
@@ -164,7 +153,6 @@ const News = () => {
                     {/* Type Badge & Date */}
                     <div className="flex items-center justify-between mb-4">
                       <span className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold border ${getTypeColor(info.type)}`}>
-                        {getTypeIcon(info.type)}
                         {info.type}
                       </span>
                       <span className="text-xs text-white/60 font-medium">{info.date}</span>
@@ -184,9 +172,9 @@ const News = () => {
                     </p>
                   </div>
                   
-                  {/* Corner Decoration */}
-                  <div className="absolute bottom-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity">
-                    <Bell size={40} className="text-yellow" />
+                  {/* Corner Number */}
+                  <div className="absolute bottom-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <span className="font-serif text-5xl font-bold text-yellow">{String(index + 1).padStart(2, '0')}</span>
                   </div>
                 </motion.div>
               );
@@ -200,11 +188,10 @@ const News = () => {
         <div className="container-custom">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             <div className="relative w-full md:w-80">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
               <input
                 type="text"
                 placeholder="Search articles..."
-                className="w-full pl-12 pr-4 py-3 rounded-xl bg-card border border-border focus:outline-none focus:ring-2 focus:ring-secondary"
+                className="w-full px-4 py-3 rounded-xl bg-card border border-border focus:outline-none focus:ring-2 focus:ring-secondary"
               />
             </div>
             <div className="flex flex-wrap gap-2">
@@ -251,10 +238,9 @@ const News = () => {
                   <span className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-medium">
                     {article.category}
                   </span>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Calendar size={14} />
-                    <span>{article.date}</span>
-                  </div>
+                  <span className="text-sm text-muted-foreground">
+                    {article.date}
+                  </span>
                 </div>
                 <h2 className="font-serif text-3xl lg:text-4xl font-bold text-foreground mb-4">
                   {article.title}
@@ -309,10 +295,9 @@ const News = () => {
                   </span>
                 </div>
                 <div className="p-6">
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-                    <Calendar size={14} />
-                    <span>{article.date}</span>
-                  </div>
+                  <span className="text-sm text-muted-foreground mb-3 block">
+                    {article.date}
+                  </span>
                   <h3 className="font-serif text-lg font-bold text-foreground mb-2 group-hover:text-secondary transition-colors line-clamp-2">
                     {article.title}
                   </h3>
