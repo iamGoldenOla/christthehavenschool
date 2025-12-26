@@ -249,7 +249,7 @@ const Admissions = () => {
                   </div>
                   <div>
                     <p className="text-sm opacity-80">Call Us</p>
-                    <p className="font-semibold">+234 123 456 7890</p>
+                    <p className="font-semibold">+234 802 335 7800</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -258,7 +258,7 @@ const Admissions = () => {
                   </div>
                   <div>
                     <p className="text-sm opacity-80">Email Us</p>
-                    <p className="font-semibold">admissions@christthehaven.edu</p>
+                    <p className="font-semibold">admissions@christthehavenschool.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">

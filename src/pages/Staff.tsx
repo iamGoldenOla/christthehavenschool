@@ -11,6 +11,8 @@ import dorisAkalazu from "@/assets/staff/doris-akalazu.jpg";
 import julianaIyedupe from "@/assets/staff/juliana-iyedupe.jpg";
 import modupeOmezi from "@/assets/staff/modupe-omezi.jpg";
 import wunmiAzeez from "@/assets/staff/wunmi-azeez.jpg";
+import deborahOlakoli from "@/assets/staff/deborah-olakoli.jpg";
+import adaJonathan from "@/assets/staff/ada-jonathan.jpg";
 import heroBg from "@/assets/hero-3.jpg";
 
 const staff = [
@@ -68,6 +70,20 @@ const staff = [
     role: "Class Teacher",
     image: wunmiAzeez,
     description: "Passionate teacher inspiring students to reach their full potential.",
+    featured: false,
+  },
+  {
+    name: "Mrs Deborah Olakoli",
+    role: "Class Teacher",
+    image: deborahOlakoli,
+    description: "Dedicated educator committed to nurturing young minds with patience and care.",
+    featured: false,
+  },
+  {
+    name: "Mrs Ada Jonathan",
+    role: "Class Teacher",
+    image: adaJonathan,
+    description: "Experienced teacher with a passion for early childhood education and development.",
     featured: false,
   },
 ];
