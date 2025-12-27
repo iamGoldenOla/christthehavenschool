@@ -56,9 +56,6 @@ const Academics = () => {
             <p className="text-lg opacity-90">
               Comprehensive educational programs for Nursery and Primary students
             </p>
-            <p className="text-yellow font-semibold mt-4">
-              School Motto: Excellence & Godliness
-            </p>
           </motion.div>
         </div>
       </section>

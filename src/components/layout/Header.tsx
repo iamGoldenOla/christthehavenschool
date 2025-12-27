@@ -65,9 +65,9 @@ const Header = () => {
             <img src={logo} alt="Christ The Haven School Logo" className="w-14 h-14 object-contain" />
             <div className="hidden sm:block">
               <h1 className="font-serif text-primary font-bold text-lg leading-tight">
-                Christ The Haven
+                Christ The Haven School
               </h1>
-              <p className="text-xs text-muted-foreground">School</p>
+              <p className="text-xs text-muted-foreground italic">Excellence and Godliness</p>
             </div>
           </Link>
 
