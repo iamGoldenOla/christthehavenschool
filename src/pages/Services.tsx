@@ -117,14 +117,6 @@ const Services = () => {
               Comprehensive services designed to support every aspect of your child's 
               educational journey at Christ The Haven School.
             </motion.p>
-            <motion.p 
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="text-yellow font-semibold mt-4"
-            >
-              School Motto: Excellence & Godliness
-            </motion.p>
           </motion.div>
         </div>
       </section>
