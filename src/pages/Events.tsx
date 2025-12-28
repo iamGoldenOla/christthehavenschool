@@ -190,7 +190,7 @@ const Events = () => {
               className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6"
             >
               <Calendar className="w-4 h-4 text-secondary" />
-              <span className="text-sm font-medium">Mark Your Calendar</span>
+              <span className="text-sm font-medium text-white">Mark Your Calendar</span>
             </motion.div>
             
             <motion.h1 
