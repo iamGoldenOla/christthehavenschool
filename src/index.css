@@ -26,8 +26,8 @@
     --yellow-light: 45 100% 70%;
     --yellow-dark: 45 100% 42%;
     
-    /* Background & Surfaces */
-    --background: 45 30% 98%;
+    /* Background & Surfaces - Light Sky Blue tint */
+    --background: 199 50% 97%;
     --foreground: 220 40% 15%;
     
     --card: 0 0% 100%;
