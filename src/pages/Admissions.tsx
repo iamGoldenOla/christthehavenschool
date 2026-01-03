@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
   FileText, 
   UserCheck, 
@@ -7,7 +8,8 @@ import {
   GraduationCap,
   Phone,
   Mail,
-  Calendar
+  Calendar,
+  ChevronDown
 } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -87,6 +89,73 @@ const requirements = [
   "Immunization records",
   "Parent/Guardian valid ID"
 ];
+
+const faqs = [
+  {
+    question: "What age groups do you accept?",
+    answer: "We accept students from age 2 (creche) through primary school. Our programs cater to early years (creche and nursery) and primary education."
+  },
+  {
+    question: "Is there an entrance examination?",
+    answer: "Yes, prospective students undergo a simple assessment to determine their academic level and ensure proper class placement. This is not an elimination test but a placement tool."
+  },
+  {
+    question: "What are the school fees?",
+    answer: "School fees vary by class level. Please contact our admissions office or visit the school to receive a detailed fee structure for your child's intended class."
+  },
+  {
+    question: "Do you offer payment plans?",
+    answer: "Yes, we understand that education is an investment. We offer flexible payment options to help parents manage their finances while ensuring quality education for their children."
+  }
+];
+
+const FAQAccordion = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  return (
+    <div className="max-w-3xl mx-auto grid gap-4">
+      {faqs.map((faq, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: index * 0.1 }}
+          className="bg-card rounded-xl shadow-sm border border-border overflow-hidden"
+        >
+          <button
+            onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            className="w-full flex items-center justify-between p-6 text-left hover:bg-accent/50 transition-colors"
+          >
+            <h4 className="font-serif text-lg font-bold text-foreground pr-4">
+              {faq.question}
+            </h4>
+            <ChevronDown 
+              className={`w-5 h-5 text-secondary shrink-0 transition-transform duration-300 ${
+                openIndex === index ? 'rotate-180' : ''
+              }`} 
+            />
+          </button>
+          <AnimatePresence>
+            {openIndex === index && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden"
+              >
+                <div className="px-6 pb-6 pt-0">
+                  <p className="text-muted-foreground">{faq.answer}</p>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
+      ))}
+    </div>
+  );
+};
 
 const Admissions = () => {
   return (
@@ -278,7 +347,7 @@ const Admissions = () => {
                     Schedule a Visit
                   </Button>
                 </Link>
-                <Button variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                <Button variant="outline" size="lg" className="border-primary-foreground/30 text-foreground bg-primary-foreground hover:bg-primary-foreground/90 hover:text-primary-foreground">
                   Download Form
                 </Button>
               </div>
@@ -330,40 +399,7 @@ const Admissions = () => {
             </h2>
           </motion.div>
 
-          <div className="max-w-3xl mx-auto space-y-6">
-            {[
-              {
-                question: "What age groups do you accept?",
-                answer: "We accept students from age 2 (creche) through primary school. Our programs cater to early years (creche and nursery) and primary education."
-              },
-              {
-                question: "Is there an entrance examination?",
-                answer: "Yes, prospective students undergo a simple assessment to determine their academic level and ensure proper class placement. This is not an elimination test but a placement tool."
-              },
-              {
-                question: "What are the school fees?",
-                answer: "School fees vary by class level. Please contact our admissions office or visit the school to receive a detailed fee structure for your child's intended class."
-              },
-              {
-                question: "Do you offer payment plans?",
-                answer: "Yes, we understand that education is an investment. We offer flexible payment options to help parents manage their finances while ensuring quality education for their children."
-              }
-            ].map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-card rounded-xl p-6 shadow-sm border border-border"
-              >
-                <h4 className="font-serif text-lg font-bold text-foreground mb-2">
-                  {faq.question}
-                </h4>
-                <p className="text-muted-foreground">{faq.answer}</p>
-              </motion.div>
-            ))}
-          </div>
+          <FAQAccordion />
         </div>
       </section>
 
