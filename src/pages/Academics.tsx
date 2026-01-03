@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-2.jpg";
+import curriculumImg from "@/assets/curriculum.jpg";
 
 const programs = [
   {
@@ -157,7 +158,7 @@ const Academics = () => {
               viewport={{ once: true }}
             >
               <img
-                src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&h=600&fit=crop"
+                src={curriculumImg}
                 alt="Students in classroom"
                 className="rounded-2xl shadow-card-lg"
               />
