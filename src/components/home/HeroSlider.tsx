@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+<<<<<<< HEAD
 import { ChevronLeft, ChevronRight } from "lucide-react";
+=======
+
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 import { Button } from "@/components/ui/button";
 
 import hero1 from "@/assets/hero-1.jpg";
@@ -118,7 +122,11 @@ const HeroSlider = () => {
       </AnimatePresence>
 
       {/* Content */}
+<<<<<<< HEAD
       <div className="absolute inset-0 flex items-center">
+=======
+      <div className="absolute inset-0 flex items-center justify-center">
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <AnimatePresence mode="wait">
             <motion.div
@@ -127,7 +135,11 @@ const HeroSlider = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -30 }}
               transition={{ duration: 0.5, delay: 0.3 }}
+<<<<<<< HEAD
               className="max-w-2xl text-primary-foreground"
+=======
+              className="max-w-3xl mx-auto text-center text-primary-foreground"
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
             >
               <span className="inline-block px-4 py-2 bg-secondary text-secondary-foreground rounded-full text-sm font-medium mb-6">
                 {slides[currentSlide].subtitle}
@@ -135,10 +147,17 @@ const HeroSlider = () => {
               <h1 className="heading-display mb-6 leading-tight">
                 {slides[currentSlide].title}
               </h1>
+<<<<<<< HEAD
               <p className="text-lg md:text-xl opacity-90 mb-8 leading-relaxed">
                 {slides[currentSlide].description}
               </p>
               <div className="flex flex-wrap gap-4">
+=======
+              <p className="text-lg md:text-xl opacity-90 mb-8 leading-relaxed max-w-2xl mx-auto">
+                {slides[currentSlide].description}
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center">
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
                 <Button variant="sky" size="lg">
                   Explore Programs
                 </Button>
@@ -151,6 +170,7 @@ const HeroSlider = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
@@ -164,6 +184,8 @@ const HeroSlider = () => {
       >
         <ChevronRight size={24} />
       </button>
+=======
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">

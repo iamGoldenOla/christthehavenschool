@@ -3,6 +3,12 @@ import { ArrowRight, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import proprietressImg from "@/assets/proprietress.jpg";
+<<<<<<< HEAD
+=======
+import kemiObakpolor from "@/assets/staff/kemi-obakpolor.jpg";
+import blessingJaphet from "@/assets/staff/blessing-japhet.jpg";
+import abiodunOlorunsuyi from "@/assets/staff/abiodun-olorunsuyi.jpg";
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 
 const teamMembers = [
   {
@@ -12,6 +18,7 @@ const teamMembers = [
     featured: true,
   },
   {
+<<<<<<< HEAD
     name: "Staff Member",
     role: "Head Teacher",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
@@ -27,6 +34,23 @@ const teamMembers = [
     name: "Staff Member",
     role: "Class Teacher",
     image: "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=400&h=400&fit=crop",
+=======
+    name: "Mrs Kemi Obakpolor",
+    role: "School Supervisor",
+    image: kemiObakpolor,
+    featured: false,
+  },
+  {
+    name: "Mrs Blessing Japhet",
+    role: "Class Teacher",
+    image: blessingJaphet,
+    featured: false,
+  },
+  {
+    name: "Mrs Abiodun Olorunsuyi",
+    role: "Class Teacher",
+    image: abiodunOlorunsuyi,
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
     featured: false,
   },
 ];
@@ -62,7 +86,11 @@ const TeamPreview = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {teamMembers.map((member, index) => (
             <motion.div
+<<<<<<< HEAD
               key={member.name + index}
+=======
+              key={member.name}
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -71,11 +99,19 @@ const TeamPreview = () => {
                 member.featured ? "ring-2 ring-secondary" : ""
               }`}
             >
+<<<<<<< HEAD
               <div className="relative h-56 overflow-hidden">
                 <img
                   src={member.image}
                   alt={member.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+=======
+              <div className="relative h-64 overflow-hidden">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
                 />
                 {member.featured && (
                   <div className="absolute top-3 left-3">

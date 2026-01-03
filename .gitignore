@@ -1,9 +1,9 @@
 # Dependencies
 node_modules/
+backend/node_modules/
 
 # Backend build output
 dist/
-backend/node_modules/
 backend/dist/
 backend/logs/
 
@@ -64,13 +64,6 @@ Thumbs.db
 *.sw?
 
 # OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
 
 # Next.js
 .next/
@@ -82,4 +75,8 @@ static/nuxt/
 
 # Frontend build files
 build/
+dist-ssr
 *.local
+
+# Bun specific
+bun.lockb

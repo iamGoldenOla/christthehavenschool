@@ -3,6 +3,11 @@ import { BookOpen, Music, Palette, Trophy, Laptop, Users, Sparkles } from "lucid
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
+=======
+import heroBg from "@/assets/hero-2.jpg";
+import curriculumImg from "@/assets/curriculum.jpg";
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 
 const programs = [
   {
@@ -37,20 +42,39 @@ const Academics = () => {
       <Header />
       
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-3xl mx-auto"
+=======
+      <section className="pt-32 pb-20 relative overflow-hidden">
+        {/* Hero Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroBg})` }}
+        />
+        <div className="absolute inset-0 bg-primary/85" />
+        
+        <div className="container-custom relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center max-w-3xl mx-auto text-primary-foreground"
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
           >
             <h1 className="heading-display mb-4">Academics</h1>
             <p className="text-lg opacity-90">
               Comprehensive educational programs for Nursery and Primary students
             </p>
+<<<<<<< HEAD
             <p className="text-yellow font-semibold mt-4">
               School Motto: Excellence & Godliness
             </p>
+=======
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
           </motion.div>
         </div>
       </section>
@@ -116,6 +140,21 @@ const Academics = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
+=======
+              <img
+                src={curriculumImg}
+                alt="Students in classroom"
+                className="rounded-2xl shadow-card-lg"
+              />
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
               <span className="text-secondary font-medium text-sm uppercase tracking-wider">
                 Curriculum
               </span>
@@ -145,6 +184,7 @@ const Academics = () => {
                 ))}
               </div>
             </motion.div>
+<<<<<<< HEAD
             
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -157,6 +197,8 @@ const Academics = () => {
                 className="rounded-2xl shadow-card-lg"
               />
             </motion.div>
+=======
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
           </div>
         </div>
       </section>

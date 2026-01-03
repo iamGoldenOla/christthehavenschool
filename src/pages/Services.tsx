@@ -4,6 +4,10 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
+=======
+import servicesBg from "@/assets/parallax/services-bg.jpg";
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 
 const services = [
   {
@@ -70,6 +74,7 @@ const comingSoonServices = [
 
 const Services = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-background">
       <Header />
       
@@ -92,12 +97,64 @@ const Services = () => {
             <p className="text-yellow font-semibold mt-4">
               School Motto: Excellence & Godliness
             </p>
+=======
+    <div className="min-h-screen relative">
+      {/* Parallax Background */}
+      <div 
+        className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${servicesBg})`,
+          backgroundAttachment: "fixed"
+        }}
+      />
+      <div className="fixed inset-0 -z-10 bg-background/40" />
+      
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 relative overflow-hidden">
+        {/* Hero Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${servicesBg})` }}
+        />
+        <div className="absolute inset-0 bg-primary/85" />
+        
+        <div className="container-custom relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center text-primary-foreground"
+          >
+            <motion.h1 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="heading-display mb-6"
+            >
+              Our Services
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.9 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="text-lg md:text-xl max-w-3xl mx-auto"
+            >
+              Comprehensive services designed to support every aspect of your child's 
+              educational journey at Christ The Haven School.
+            </motion.p>
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
           </motion.div>
         </div>
       </section>
 
       {/* Services Grid */}
+<<<<<<< HEAD
       <section className="section-padding">
+=======
+      <section className="section-padding bg-background/50 backdrop-blur-sm">
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -133,7 +190,11 @@ const Services = () => {
       </section>
 
       {/* Clubs Section */}
+<<<<<<< HEAD
       <section className="section-padding bg-muted">
+=======
+      <section className="section-padding bg-muted/80 backdrop-blur-sm">
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -174,7 +235,11 @@ const Services = () => {
       </section>
 
       {/* Coming Soon Section */}
+<<<<<<< HEAD
       <section className="section-padding bg-background">
+=======
+      <section className="section-padding bg-background/50 backdrop-blur-sm">
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -216,7 +281,11 @@ const Services = () => {
       </section>
 
       {/* Additional Services */}
+<<<<<<< HEAD
       <section className="section-padding bg-muted">
+=======
+      <section className="section-padding bg-muted/80 backdrop-blur-sm">
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -255,7 +324,11 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="section-padding gradient-primary">
+=======
+      <section className="section-padding gradient-primary backdrop-blur-sm">
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

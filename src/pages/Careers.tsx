@@ -7,6 +7,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+<<<<<<< HEAD
+=======
+import careersBg from "@/assets/parallax/careers-bg.jpg";
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 
 const benefits = [
   {
@@ -67,6 +71,7 @@ const Careers = () => {
   };
 
   return (
+<<<<<<< HEAD
     <main className="min-h-screen">
       <Header />
       
@@ -89,12 +94,73 @@ const Careers = () => {
               young learners. We're always looking for passionate educators who share 
               our commitment to excellence and godliness.
             </p>
+=======
+    <main className="min-h-screen relative">
+      {/* Parallax Background */}
+      <div 
+        className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${careersBg})`,
+          backgroundAttachment: "fixed"
+        }}
+      />
+      <div className="fixed inset-0 -z-10 bg-background/40" />
+      
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 relative overflow-hidden">
+        {/* Hero Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${careersBg})` }}
+        />
+        <div className="absolute inset-0 bg-primary/85" />
+        
+        <div className="container-custom relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center max-w-3xl mx-auto text-primary-foreground"
+          >
+            <motion.span 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="text-yellow font-medium text-sm uppercase tracking-wider"
+            >
+              Join Our Team
+            </motion.span>
+            <motion.h1 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="heading-display mt-4 mb-6"
+            >
+              Build a <span className="text-yellow">Career</span> with Purpose
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.9 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="text-lg"
+            >
+              Join Christ The Haven School and make a difference in the lives of 
+              young learners. We're always looking for passionate educators who share 
+              our commitment to excellence and godliness.
+            </motion.p>
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
           </motion.div>
         </div>
       </section>
 
       {/* Why Join Us */}
+<<<<<<< HEAD
       <section className="section-padding bg-background">
+=======
+      <section className="section-padding bg-background/50 backdrop-blur-sm">
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -134,7 +200,11 @@ const Careers = () => {
       </section>
 
       {/* Open Positions */}
+<<<<<<< HEAD
       <section className="section-padding bg-muted">
+=======
+      <section className="section-padding bg-muted/80 backdrop-blur-sm">
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -188,7 +258,11 @@ const Careers = () => {
       </section>
 
       {/* Application Form */}
+<<<<<<< HEAD
       <section className="section-padding bg-primary text-primary-foreground">
+=======
+      <section className="section-padding bg-primary/80 text-primary-foreground backdrop-blur-sm">
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div

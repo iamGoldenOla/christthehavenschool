@@ -10,6 +10,10 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import proprietressImage from "@/assets/proprietress.jpg";
+<<<<<<< HEAD
+=======
+import aboutBg from "@/assets/parallax/about-bg.jpg";
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 
 const values = [
   {
@@ -36,6 +40,7 @@ const values = [
 
 const About = () => {
   return (
+<<<<<<< HEAD
     <main className="min-h-screen">
       <Header />
       
@@ -54,12 +59,63 @@ const About = () => {
             <p className="text-yellow font-semibold mt-4">
               School Motto: Excellence & Godliness
             </p>
+=======
+    <main className="min-h-screen relative">
+      {/* Parallax Background */}
+      <div 
+        className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${aboutBg})`,
+          backgroundAttachment: "fixed"
+        }}
+      />
+      <div className="fixed inset-0 -z-10 bg-background/40" />
+      
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 relative overflow-hidden">
+        {/* Hero Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${aboutBg})` }}
+        />
+        <div className="absolute inset-0 bg-primary/85" />
+        
+        <div className="container-custom relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center max-w-3xl mx-auto text-primary-foreground"
+          >
+            <motion.h1 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="heading-display mb-4"
+            >
+              About Our School
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.9 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="text-lg"
+            >
+              Discover the legacy of excellence at Christ The Haven School
+            </motion.p>
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
           </motion.div>
         </div>
       </section>
 
       {/* History Section */}
+<<<<<<< HEAD
       <section className="section-padding bg-background">
+=======
+      <section className="section-padding bg-background/50 backdrop-blur-sm">
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -112,7 +168,11 @@ const About = () => {
       </section>
 
       {/* Proprietress Section */}
+<<<<<<< HEAD
       <section className="section-padding bg-muted">
+=======
+      <section className="section-padding bg-muted/80 backdrop-blur-sm">
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -164,7 +224,11 @@ const About = () => {
       </section>
 
       {/* Vision & Mission */}
+<<<<<<< HEAD
       <section className="section-padding bg-background">
+=======
+      <section className="section-padding bg-background/50 backdrop-blur-sm">
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
@@ -206,7 +270,11 @@ const About = () => {
       </section>
 
       {/* Core Values */}
+<<<<<<< HEAD
       <section className="section-padding bg-muted">
+=======
+      <section className="section-padding bg-muted/80 backdrop-blur-sm">
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -248,7 +316,11 @@ const About = () => {
       </section>
 
       {/* CTA */}
+<<<<<<< HEAD
       <section className="section-padding bg-primary text-primary-foreground">
+=======
+      <section className="section-padding bg-primary/80 text-primary-foreground backdrop-blur-sm">
+>>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

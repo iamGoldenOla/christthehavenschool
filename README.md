@@ -1,4 +1,6 @@
+# Christ The Haven School
 
+## Welcome to Christ The Haven School
 
 **Use your preferred IDE**
 
@@ -45,3 +47,27 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+
+## Backend Architecture
+
+This repository also includes a comprehensive backend architecture for the school website:
+
+- **Framework**: Fastify with TypeScript
+- **Database**: PostgreSQL (via Supabase) with Drizzle ORM
+- **Authentication**: Supabase Auth with JWT and Google OAuth
+- **Validation**: Zod for input validation
+- **API Documentation**: Fastify Swagger
+
+### Features
+
+- **Authentication**: JWT-based authentication with Google OAuth support via Supabase
+- **User Management**: Role-based access control (student, teacher, admin)
+- **Student Management**: Student profiles, enrollment, and grade tracking
+- **Class Management**: Class creation, assignment to teachers, student enrollment
+- **Form Management**: Dynamic form templates and submissions
+- **Security**: Input validation with Zod, rate limiting, and XSS protection
+- **API Documentation**: OpenAPI/Swagger documentation available at `/docs`
+
+### Deployment
+
+The backend is designed for deployment on traditional web hosts via cPanel with Node.js support.
