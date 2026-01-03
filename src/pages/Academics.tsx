@@ -122,6 +122,18 @@ const Academics = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
+              <img
+                src={curriculumImg}
+                alt="Students in classroom"
+                className="rounded-2xl shadow-card-lg"
+              />
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
               <span className="text-secondary font-medium text-sm uppercase tracking-wider">
                 Curriculum
               </span>
@@ -150,18 +162,6 @@ const Academics = () => {
                   </div>
                 ))}
               </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <img
-                src={curriculumImg}
-                alt="Students in classroom"
-                className="rounded-2xl shadow-card-lg"
-              />
             </motion.div>
           </div>
         </div>
