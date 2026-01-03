@@ -18,7 +18,6 @@ const navItems: NavItem[] = [
     name: "Academics", 
     path: "/academics",
     children: [
-      { name: "Overview", path: "/academics" },
       { name: "Admissions", path: "/admissions" },
       { name: "Our Staff", path: "/staff" },
     ]
@@ -77,20 +76,31 @@ const Header = () => {
               <div key={item.name} className="relative">
                 {item.children ? (
                   <>
-                    <button
-                      onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
-                      className={`px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 flex items-center gap-1 ${
-                        isActivePath(item)
-                          ? "bg-primary text-primary-foreground"
-                          : "text-foreground hover:bg-accent hover:text-accent-foreground"
-                      }`}
-                    >
-                      {item.name}
-                      <ChevronDown 
-                        size={14} 
-                        className={`transition-transform duration-200 ${openDropdown === item.name ? 'rotate-180' : ''}`} 
-                      />
-                    </button>
+                    <div className="flex items-center">
+                      <Link
+                        to={item.path!}
+                        className={`px-4 py-2 rounded-l-lg font-medium text-sm transition-all duration-200 ${
+                          isActivePath(item)
+                            ? "bg-primary text-primary-foreground"
+                            : "text-foreground hover:bg-accent hover:text-accent-foreground"
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                      <button
+                        onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
+                        className={`px-2 py-2 rounded-r-lg font-medium text-sm transition-all duration-200 ${
+                          isActivePath(item)
+                            ? "bg-primary text-primary-foreground"
+                            : "text-foreground hover:bg-accent hover:text-accent-foreground"
+                        }`}
+                      >
+                        <ChevronDown 
+                          size={14} 
+                          className={`transition-transform duration-200 ${openDropdown === item.name ? 'rotate-180' : ''}`} 
+                        />
+                      </button>
+                    </div>
                     <AnimatePresence>
                       {openDropdown === item.name && (
                         <motion.div
@@ -165,20 +175,32 @@ const Header = () => {
                 <div key={item.name}>
                   {item.children ? (
                     <>
-                      <button
-                        onClick={() => setMobileOpenDropdown(mobileOpenDropdown === item.name ? null : item.name)}
-                        className={`w-full px-4 py-3 rounded-lg font-medium transition-all duration-200 flex items-center justify-between ${
-                          isActivePath(item)
-                            ? "bg-primary text-primary-foreground"
-                            : "text-foreground hover:bg-accent"
-                        }`}
-                      >
-                        {item.name}
-                        <ChevronDown 
-                          size={16} 
-                          className={`transition-transform duration-200 ${mobileOpenDropdown === item.name ? 'rotate-180' : ''}`} 
-                        />
-                      </button>
+                      <div className="flex items-center justify-between">
+                        <Link
+                          to={item.path!}
+                          onClick={() => setIsMenuOpen(false)}
+                          className={`flex-1 px-4 py-3 rounded-l-lg font-medium transition-all duration-200 ${
+                            isActivePath(item)
+                              ? "bg-primary text-primary-foreground"
+                              : "text-foreground hover:bg-accent"
+                          }`}
+                        >
+                          {item.name}
+                        </Link>
+                        <button
+                          onClick={() => setMobileOpenDropdown(mobileOpenDropdown === item.name ? null : item.name)}
+                          className={`px-4 py-3 rounded-r-lg font-medium transition-all duration-200 ${
+                            isActivePath(item)
+                              ? "bg-primary text-primary-foreground"
+                              : "text-foreground hover:bg-accent"
+                          }`}
+                        >
+                          <ChevronDown 
+                            size={16} 
+                            className={`transition-transform duration-200 ${mobileOpenDropdown === item.name ? 'rotate-180' : ''}`} 
+                          />
+                        </button>
+                      </div>
                       <AnimatePresence>
                         {mobileOpenDropdown === item.name && (
                           <motion.div
