@@ -1,5 +1,20 @@
 # Christ The Haven School
 
+This is the frontend application for Christ The Haven School.
+
+## Development
+
+To run the application locally:
+
+```bash
+npm install
+npm run dev
+```
+
+## Deployment
+
+This application is deployed to cPanel using GitHub Actions.
+
 ## Welcome to Christ The Haven School
 
 **Use your preferred IDE**
