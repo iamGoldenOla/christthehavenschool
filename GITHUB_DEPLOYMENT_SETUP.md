@@ -1,6 +1,6 @@
 # GitHub Actions Deployment Setup for cPanel (FTP-only)
 
-This document explains how to set up GitHub repository secrets for deploying your application to cPanel using GitHub Actions with FTP only (no SSH access required).
+This document explains how to set up GitHub repository secrets for deploying your frontend application to cPanel using GitHub Actions with FTP only (no SSH access required). Your backend API connects to Supabase services.
 
 ## Prerequisites
 
@@ -34,18 +34,9 @@ To configure the deployment, you need to add the following secrets to your GitHu
 
 #### Deployment Path Secrets:
 - `FTP_DIR` - Server path for frontend deployment (e.g., `public_html/`)
-- For backend deployment, files will be placed in `/backend/` directory
 
-#### Backend Environment Secrets:
-- `SUPABASE_URL` - Your Supabase project URL
-- `SUPABASE_ANON_KEY` - Your Supabase anon key
-- `SUPABASE_SERVICE_ROLE_KEY` - Your Supabase service role key (keep this secure!)
-- `JWT_SECRET` - Secret key for JWT token signing
-- `DATABASE_URL` - PostgreSQL connection string
-- `CORS_ORIGIN` - Frontend domain for CORS configuration (e.g., https://yourdomain.com)
-
-#### Frontend Environment Secrets:
-- `VITE_API_URL` - URL of your backend API (e.g., https://api.yourdomain.com)
+#### Environment Secrets:
+- `VITE_API_URL` - URL of your backend API or Supabase endpoint (e.g., https://your-project.supabase.co)
 
 ## Security Best Practices
 
@@ -58,12 +49,9 @@ To configure the deployment, you need to add the following secrets to your GitHu
 
 1. Once you've added all the required secrets, any push to the `main` branch will trigger the deployment
 2. The workflow will:
-   - Build the backend application
-   - Install backend dependencies
-   - Create environment configuration
-   - Deploy the backend to your cPanel server via FTP
    - Build the frontend application
    - Deploy the frontend to your cPanel server via FTP
+   - The frontend will connect to your Supabase backend services
 
 ## Important Note about Backend Startup
 
