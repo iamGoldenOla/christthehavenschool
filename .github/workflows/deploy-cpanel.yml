@@ -40,8 +40,9 @@ jobs:
         server: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: ${{ secrets.FTP_DIR }}  # Path for frontend files
+        server-dir: ${{ secrets.FTP_DIR }}
         local-dir: ./dist/
         port: ${{ secrets.FTP_PORT }}
-        # Enable logging to help debug
         log-level: verbose
+        dry-run: false
+        dangerous-allow-insecure: true

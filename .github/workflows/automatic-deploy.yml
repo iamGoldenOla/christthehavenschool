@@ -1,0 +1,60 @@
+name: Deploy to cPanel - Automatic FTP Upload
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:  # Manual trigger from GitHub
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        cache-dependency-path: 'package.json'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Build production
+      run: npm run build
+      
+    - name: Verify dist folder
+      run: |
+        echo "=== DIST FOLDER CONTENTS ==="
+        ls -la dist/
+        echo ""
+        echo "=== DIST FOLDER SIZE ==="
+        du -sh dist/
+        echo ""
+        echo "=== CHECKING KEY FILES ==="
+        test -f dist/index.html && echo "✓ index.html found" || echo "✗ index.html NOT found"
+        test -f dist/.htaccess && echo "✓ .htaccess found" || echo "✗ .htaccess NOT found"
+        test -d dist/assets && echo "✓ assets folder found" || echo "✗ assets folder NOT found"
+    
+    - name: Deploy to cPanel via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        port: ${{ secrets.FTP_PORT }}
+        server-dir: ${{ secrets.FTP_DIR }}
+        local-dir: ./dist/
+        state-name: .ftp-deploy-sync-state.json
+        security: mixed
+        dangerous-allow-insecure: true
+        log-level: verbose
+        
+    - name: Deployment Summary
+      run: |
+        echo "🎉 Deployment Complete!"
+        echo "Files uploaded to: ftp://${{ secrets.FTP_HOST }}/${{ secrets.FTP_DIR }}"
+        echo "Visit: https://christthehavenschool.com"
