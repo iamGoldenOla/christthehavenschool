@@ -7,10 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-<<<<<<< HEAD
-=======
 import careersBg from "@/assets/parallax/careers-bg.jpg";
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 
 const benefits = [
   {
@@ -71,30 +68,6 @@ const Careers = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <main className="min-h-screen">
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-primary text-primary-foreground">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <span className="text-yellow font-medium text-sm uppercase tracking-wider">
-              Join Our Team
-            </span>
-            <h1 className="heading-display mt-4 mb-6">
-              Build a <span className="text-yellow">Career</span> with Purpose
-            </h1>
-            <p className="text-lg opacity-90">
-              Join Christ The Haven School and make a difference in the lives of 
-              young learners. We're always looking for passionate educators who share 
-              our commitment to excellence and godliness.
-            </p>
-=======
     <main className="min-h-screen relative">
       {/* Parallax Background */}
       <div 
@@ -150,17 +123,12 @@ const Careers = () => {
               young learners. We're always looking for passionate educators who share 
               our commitment to excellence and godliness.
             </motion.p>
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
           </motion.div>
         </div>
       </section>
 
       {/* Why Join Us */}
-<<<<<<< HEAD
-      <section className="section-padding bg-background">
-=======
       <section className="section-padding bg-background/50 backdrop-blur-sm">
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -200,11 +168,7 @@ const Careers = () => {
       </section>
 
       {/* Open Positions */}
-<<<<<<< HEAD
-      <section className="section-padding bg-muted">
-=======
       <section className="section-padding bg-muted/80 backdrop-blur-sm">
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -258,11 +222,7 @@ const Careers = () => {
       </section>
 
       {/* Application Form */}
-<<<<<<< HEAD
-      <section className="section-padding bg-primary text-primary-foreground">
-=======
       <section className="section-padding bg-primary/80 text-primary-foreground backdrop-blur-sm">
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div

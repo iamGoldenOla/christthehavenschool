@@ -3,29 +3,6 @@ import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-
-const Contact = () => {
-  return (
-    <main className="min-h-screen">
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-primary text-primary-foreground">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <h1 className="heading-display mb-4">Contact Us</h1>
-            <p className="text-lg opacity-90">
-              We'd love to hear from you. Get in touch with us today.
-            </p>
-            <p className="text-yellow font-semibold mt-4">
-              School Motto: Excellence & Godliness
-            </p>
-=======
 import contactBg from "@/assets/parallax/contact-bg.jpg";
 
 const Contact = () => {
@@ -75,17 +52,12 @@ const Contact = () => {
             >
               We'd love to hear from you. Get in touch with us today.
             </motion.p>
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
           </motion.div>
         </div>
       </section>
 
       {/* Contact Info & Form */}
-<<<<<<< HEAD
-      <section className="section-padding bg-background">
-=======
       <section className="section-padding bg-background/50 backdrop-blur-sm">
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Information */}
@@ -199,7 +171,7 @@ const Contact = () => {
                   </label>
                   <input
                     type="email"
-                      className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:outline-none focus:ring-2 focus:ring-secondary"
+                    className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:outline-none focus:ring-2 focus:ring-secondary"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -239,11 +211,7 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-<<<<<<< HEAD
-      <section className="h-96 bg-muted">
-=======
       <section className="h-96 bg-muted/80 backdrop-blur-sm">
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3!2d3.4!3d6.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDInMDAuMCJOIDPCsDI0JzAwLjAiRQ!5e0!3m2!1sen!2sng!4v1234567890"
           width="100%"

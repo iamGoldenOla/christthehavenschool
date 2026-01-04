@@ -4,10 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-=======
 import servicesBg from "@/assets/parallax/services-bg.jpg";
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 
 const services = [
   {
@@ -74,30 +71,6 @@ const comingSoonServices = [
 
 const Services = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-background">
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 gradient-primary">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h1 className="heading-display text-primary-foreground mb-6">
-              Our Services
-            </h1>
-            <p className="text-primary-foreground/80 text-lg md:text-xl max-w-3xl mx-auto">
-              Comprehensive services designed to support every aspect of your child's 
-              educational journey at Christ The Haven School.
-            </p>
-            <p className="text-yellow font-semibold mt-4">
-              School Motto: Excellence & Godliness
-            </p>
-=======
     <div className="min-h-screen relative">
       {/* Parallax Background */}
       <div 
@@ -144,17 +117,12 @@ const Services = () => {
               Comprehensive services designed to support every aspect of your child's 
               educational journey at Christ The Haven School.
             </motion.p>
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
           </motion.div>
         </div>
       </section>
 
       {/* Services Grid */}
-<<<<<<< HEAD
-      <section className="section-padding">
-=======
       <section className="section-padding bg-background/50 backdrop-blur-sm">
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -190,11 +158,7 @@ const Services = () => {
       </section>
 
       {/* Clubs Section */}
-<<<<<<< HEAD
-      <section className="section-padding bg-muted">
-=======
       <section className="section-padding bg-muted/80 backdrop-blur-sm">
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -235,11 +199,7 @@ const Services = () => {
       </section>
 
       {/* Coming Soon Section */}
-<<<<<<< HEAD
-      <section className="section-padding bg-background">
-=======
       <section className="section-padding bg-background/50 backdrop-blur-sm">
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -281,11 +241,7 @@ const Services = () => {
       </section>
 
       {/* Additional Services */}
-<<<<<<< HEAD
-      <section className="section-padding bg-muted">
-=======
       <section className="section-padding bg-muted/80 backdrop-blur-sm">
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -324,11 +280,7 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="section-padding gradient-primary">
-=======
       <section className="section-padding gradient-primary backdrop-blur-sm">
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

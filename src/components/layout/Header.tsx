@@ -1,23 +1,10 @@
-<<<<<<< HEAD
-import { useState } from "react";
-=======
 import { useState, useRef, useEffect } from "react";
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
-<<<<<<< HEAD
-const navItems = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Academics", path: "/academics" },
-  { name: "Admissions", path: "/admissions" },
-  { name: "Services", path: "/services" },
-  { name: "Our Staff", path: "/staff" },
-=======
 interface NavItem {
   name: string;
   path?: string;
@@ -36,7 +23,6 @@ const navItems: NavItem[] = [
     ]
   },
   { name: "Services", path: "/services" },
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
   { name: "Events", path: "/events" },
   { name: "News & Blog", path: "/news" },
   { name: "Careers", path: "/careers" },
@@ -45,9 +31,6 @@ const navItems: NavItem[] = [
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-<<<<<<< HEAD
-  const location = useLocation();
-=======
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileOpenDropdown, setMobileOpenDropdown] = useState<string | null>(null);
   const location = useLocation();
@@ -71,7 +54,6 @@ const Header = () => {
     }
     return false;
   };
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md shadow-sm">
@@ -82,34 +64,6 @@ const Header = () => {
             <img src={logo} alt="Christ The Haven School Logo" className="w-14 h-14 object-contain" />
             <div className="hidden sm:block">
               <h1 className="font-serif text-primary font-bold text-lg leading-tight">
-<<<<<<< HEAD
-                Christ The Haven
-              </h1>
-              <p className="text-xs text-muted-foreground">School</p>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 ${
-                  location.pathname === item.path
-                    ? "bg-primary text-primary-foreground"
-                    : "text-foreground hover:bg-accent hover:text-accent-foreground"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
-
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Link to="/admissions">
-=======
                 Christ The Haven School
               </h1>
               <p className="text-xs text-muted-foreground italic">Excellence and Godliness</p>
@@ -191,16 +145,11 @@ const Header = () => {
             
             {/* CTA Button - now inside nav */}
             <Link to="/admissions" className="ml-2">
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
               <Button variant="sky" size="sm">
                 Apply Now
               </Button>
             </Link>
-<<<<<<< HEAD
-          </div>
-=======
           </nav>
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 
           {/* Mobile Menu Toggle */}
           <button
@@ -223,20 +172,6 @@ const Header = () => {
           >
             <nav className="container-custom py-4 flex flex-col gap-2">
               {navItems.map((item) => (
-<<<<<<< HEAD
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
-                    location.pathname === item.path
-                      ? "bg-primary text-primary-foreground"
-                      : "text-foreground hover:bg-accent"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-=======
                 <div key={item.name}>
                   {item.children ? (
                     <>
@@ -309,7 +244,6 @@ const Header = () => {
                     </Link>
                   )}
                 </div>
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
               ))}
               <Link to="/admissions" onClick={() => setIsMenuOpen(false)}>
                 <Button variant="sky" className="mt-2 w-full">

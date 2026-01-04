@@ -1,17 +1,10 @@
 import { motion } from "framer-motion";
-<<<<<<< HEAD
-import { Calendar, ArrowRight, Search, Bell, Megaphone } from "lucide-react";
-=======
 import { ArrowRight } from "lucide-react";
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-=======
 import heroBg from "@/assets/hero-6.jpg";
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 
 const newsArticles = [
   {
@@ -88,14 +81,6 @@ const News = () => {
       <Header />
       
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="pt-32 pb-16 bg-primary text-primary-foreground">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-3xl mx-auto"
-=======
       <section className="pt-32 pb-20 relative overflow-hidden">
         {/* Hero Background Image */}
         <div 
@@ -109,7 +94,6 @@ const News = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-3xl mx-auto text-primary-foreground"
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
           >
             <h1 className="heading-display mb-4">News & Blog</h1>
             <p className="text-lg opacity-90">
@@ -120,39 +104,6 @@ const News = () => {
       </section>
 
       {/* Information Desk */}
-<<<<<<< HEAD
-      <section className="py-8 bg-yellow">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="flex items-center gap-3 mb-6"
-          >
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <Megaphone className="text-yellow" size={20} />
-            </div>
-            <h2 className="font-serif text-xl font-bold text-primary">Information Desk</h2>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-3 gap-4">
-            {informationDesk.map((info, index) => (
-              <motion.div
-                key={info.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-primary/10 rounded-xl p-4 border border-primary/20"
-              >
-                <div className="flex items-center gap-2 mb-2">
-                  <Bell size={14} className="text-primary" />
-                  <span className="text-xs font-medium text-primary">{info.type}</span>
-                  <span className="text-xs text-primary/60 ml-auto">{info.date}</span>
-                </div>
-                <h3 className="font-semibold text-primary mb-1">{info.title}</h3>
-                <p className="text-sm text-primary/80">{info.message}</p>
-              </motion.div>
-            ))}
-=======
       <section className="py-16 bg-gradient-to-br from-primary via-primary to-navy-dark relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute inset-0 opacity-10">
@@ -228,7 +179,6 @@ const News = () => {
                 </motion.div>
               );
             })}
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
           </div>
         </div>
       </section>
@@ -238,18 +188,10 @@ const News = () => {
         <div className="container-custom">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             <div className="relative w-full md:w-80">
-<<<<<<< HEAD
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
-              <input
-                type="text"
-                placeholder="Search articles..."
-                className="w-full pl-12 pr-4 py-3 rounded-xl bg-card border border-border focus:outline-none focus:ring-2 focus:ring-secondary"
-=======
               <input
                 type="text"
                 placeholder="Search articles..."
                 className="w-full px-4 py-3 rounded-xl bg-card border border-border focus:outline-none focus:ring-2 focus:ring-secondary"
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
               />
             </div>
             <div className="flex flex-wrap gap-2">
@@ -296,16 +238,9 @@ const News = () => {
                   <span className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-medium">
                     {article.category}
                   </span>
-<<<<<<< HEAD
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Calendar size={14} />
-                    <span>{article.date}</span>
-                  </div>
-=======
                   <span className="text-sm text-muted-foreground">
                     {article.date}
                   </span>
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
                 </div>
                 <h2 className="font-serif text-3xl lg:text-4xl font-bold text-foreground mb-4">
                   {article.title}
@@ -360,16 +295,9 @@ const News = () => {
                   </span>
                 </div>
                 <div className="p-6">
-<<<<<<< HEAD
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-                    <Calendar size={14} />
-                    <span>{article.date}</span>
-                  </div>
-=======
                   <span className="text-sm text-muted-foreground mb-3 block">
                     {article.date}
                   </span>
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
                   <h3 className="font-serif text-lg font-bold text-foreground mb-2 group-hover:text-secondary transition-colors line-clamp-2">
                     {article.title}
                   </h3>

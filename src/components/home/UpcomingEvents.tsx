@@ -57,13 +57,8 @@ const UpcomingEvents = () => {
             <span className="text-secondary font-medium text-sm uppercase tracking-wider">
               Mark Your Calendar
             </span>
-<<<<<<< HEAD
             <h2 className="heading-section text-foreground mt-3">
               Upcoming <span className="text-primary">Events</span>
-=======
-            <h2 className="heading-section mt-3">
-              <span className="text-primary">Upcoming</span> <span className="text-sky">Events</span>
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
             </h2>
           </div>
           <Link to="/events">

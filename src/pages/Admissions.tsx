@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import { motion } from "framer-motion";
-=======
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 import { 
   FileText, 
   UserCheck, 
@@ -12,22 +8,15 @@ import {
   GraduationCap,
   Phone,
   Mail,
-<<<<<<< HEAD
-  Calendar
-=======
   Calendar,
   ChevronDown
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import ApplicationForm from "@/components/admissions/ApplicationForm";
-<<<<<<< HEAD
-=======
 import heroBg from "@/assets/hero-4.jpg";
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 
 const admissionSteps = [
   {
@@ -101,8 +90,6 @@ const requirements = [
   "Parent/Guardian valid ID"
 ];
 
-<<<<<<< HEAD
-=======
 const faqs = [
   {
     question: "What age groups do you accept?",
@@ -170,21 +157,12 @@ const FAQAccordion = () => {
   );
 };
 
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 const Admissions = () => {
   return (
     <main className="min-h-screen">
       <Header />
       
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="pt-32 pb-16 bg-primary text-primary-foreground">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-3xl mx-auto"
-=======
       <section className="pt-32 pb-20 relative overflow-hidden">
         {/* Hero Background Image */}
         <div 
@@ -198,7 +176,6 @@ const Admissions = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-3xl mx-auto text-primary-foreground"
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
           >
             <h1 className="heading-display mb-4">Admissions</h1>
             <p className="text-lg opacity-90">
@@ -341,11 +318,7 @@ const Admissions = () => {
                   </div>
                   <div>
                     <p className="text-sm opacity-80">Call Us</p>
-<<<<<<< HEAD
-                    <p className="font-semibold">+234 123 456 7890</p>
-=======
                     <p className="font-semibold">+234 802 335 7800</p>
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -354,11 +327,7 @@ const Admissions = () => {
                   </div>
                   <div>
                     <p className="text-sm opacity-80">Email Us</p>
-<<<<<<< HEAD
-                    <p className="font-semibold">admissions@christthehaven.edu</p>
-=======
                     <p className="font-semibold">admissions@christthehavenschool.com</p>
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -378,11 +347,7 @@ const Admissions = () => {
                     Schedule a Visit
                   </Button>
                 </Link>
-<<<<<<< HEAD
-                <Button variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-=======
                 <Button variant="outline" size="lg" className="border-primary-foreground/30 text-foreground bg-primary-foreground hover:bg-primary-foreground/90 hover:text-primary-foreground">
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
                   Download Form
                 </Button>
               </div>
@@ -434,44 +399,7 @@ const Admissions = () => {
             </h2>
           </motion.div>
 
-<<<<<<< HEAD
-          <div className="max-w-3xl mx-auto space-y-6">
-            {[
-              {
-                question: "What age groups do you accept?",
-                answer: "We accept students from age 2 (creche) through primary school. Our programs cater to early years (creche and nursery) and primary education."
-              },
-              {
-                question: "Is there an entrance examination?",
-                answer: "Yes, prospective students undergo a simple assessment to determine their academic level and ensure proper class placement. This is not an elimination test but a placement tool."
-              },
-              {
-                question: "What are the school fees?",
-                answer: "School fees vary by class level. Please contact our admissions office or visit the school to receive a detailed fee structure for your child's intended class."
-              },
-              {
-                question: "Do you offer payment plans?",
-                answer: "Yes, we understand that education is an investment. We offer flexible payment options to help parents manage their finances while ensuring quality education for their children."
-              }
-            ].map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-card rounded-xl p-6 shadow-sm border border-border"
-              >
-                <h4 className="font-serif text-lg font-bold text-foreground mb-2">
-                  {faq.question}
-                </h4>
-                <p className="text-muted-foreground">{faq.answer}</p>
-              </motion.div>
-            ))}
-          </div>
-=======
           <FAQAccordion />
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         </div>
       </section>
 

@@ -10,10 +10,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import proprietressImage from "@/assets/proprietress.jpg";
-<<<<<<< HEAD
-=======
 import aboutBg from "@/assets/parallax/about-bg.jpg";
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
 
 const values = [
   {
@@ -40,26 +37,6 @@ const values = [
 
 const About = () => {
   return (
-<<<<<<< HEAD
-    <main className="min-h-screen">
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-primary text-primary-foreground">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <h1 className="heading-display mb-4">About Our School</h1>
-            <p className="text-lg opacity-90">
-              Discover the legacy of excellence at Christ The Haven School
-            </p>
-            <p className="text-yellow font-semibold mt-4">
-              School Motto: Excellence & Godliness
-            </p>
-=======
     <main className="min-h-screen relative">
       {/* Parallax Background */}
       <div 
@@ -105,17 +82,12 @@ const About = () => {
             >
               Discover the legacy of excellence at Christ The Haven School
             </motion.p>
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
           </motion.div>
         </div>
       </section>
 
       {/* History Section */}
-<<<<<<< HEAD
-      <section className="section-padding bg-background">
-=======
       <section className="section-padding bg-background/50 backdrop-blur-sm">
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -168,11 +140,7 @@ const About = () => {
       </section>
 
       {/* Proprietress Section */}
-<<<<<<< HEAD
-      <section className="section-padding bg-muted">
-=======
       <section className="section-padding bg-muted/80 backdrop-blur-sm">
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -224,11 +192,7 @@ const About = () => {
       </section>
 
       {/* Vision & Mission */}
-<<<<<<< HEAD
-      <section className="section-padding bg-background">
-=======
       <section className="section-padding bg-background/50 backdrop-blur-sm">
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
@@ -270,11 +234,7 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-<<<<<<< HEAD
-      <section className="section-padding bg-muted">
-=======
       <section className="section-padding bg-muted/80 backdrop-blur-sm">
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -316,11 +276,7 @@ const About = () => {
       </section>
 
       {/* CTA */}
-<<<<<<< HEAD
-      <section className="section-padding bg-primary text-primary-foreground">
-=======
       <section className="section-padding bg-primary/80 text-primary-foreground backdrop-blur-sm">
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
         <div className="container-custom text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

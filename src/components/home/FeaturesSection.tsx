@@ -1,45 +1,4 @@
 import { motion } from "framer-motion";
-<<<<<<< HEAD
-import { 
-  Microscope, 
-  Palette, 
-  Music, 
-  Trophy, 
-  Activity,
-  Users
-} from "lucide-react";
-
-const features = [
-  {
-    icon: Microscope,
-    title: "STEM Education",
-    description: "Modern science learning for hands-on educational experiences",
-  },
-  {
-    icon: Palette,
-    title: "Arts & Creativity",
-    description: "Dedicated spaces for visual arts and creative expression",
-  },
-  {
-    icon: Music,
-    title: "Music & Drama",
-    description: "Music rooms and performing arts facilities for expression",
-  },
-  {
-    icon: Trophy,
-    title: "Sports Excellence",
-    description: "Quality sports facilities and coaching programs",
-  },
-  {
-    icon: Activity,
-    title: "Extra-curricular Activities",
-    description: "Wide range of activities including clubs and competitions",
-  },
-  {
-    icon: Users,
-    title: "Small Class Sizes",
-    description: "Personalized attention with optimal student-teacher ratio",
-=======
 
 const features = [
   {
@@ -71,7 +30,6 @@ const features = [
     title: "Small Class Sizes",
     description: "Personalized attention with optimal student-teacher ratio",
     accent: "from-rose-500/20 to-red-500/20",
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
   },
 ];
 
@@ -107,13 +65,6 @@ const FeaturesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-<<<<<<< HEAD
-              className="group bg-card rounded-2xl p-6 shadow-card hover:shadow-card-lg transition-all hover:-translate-y-1"
-            >
-              <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors">
-                <feature.icon className="text-secondary group-hover:text-secondary-foreground" size={28} />
-              </div>
-=======
               className="group bg-card rounded-2xl p-6 shadow-card hover:shadow-card-lg transition-all hover:-translate-y-1 relative overflow-hidden"
             >
               {/* Gradient accent bar */}
@@ -126,7 +77,6 @@ const FeaturesSection = () => {
                 </span>
               </div>
               
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
               <h3 className="font-serif text-lg font-bold text-foreground mb-2">
                 {feature.title}
               </h3>

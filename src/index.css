@@ -2,16 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '@fontsource/playfair-display/400.css';
-@import '@fontsource/playfair-display/500.css';
-@import '@fontsource/playfair-display/600.css';
-@import '@fontsource/playfair-display/700.css';
-@import '@fontsource/dm-sans/400.css';
-@import '@fontsource/dm-sans/500.css';
-@import '@fontsource/dm-sans/600.css';
-@import '@fontsource/dm-sans/700.css';
-
 @layer base {
+  @import '@fontsource/playfair-display/400.css';
+  @import '@fontsource/playfair-display/500.css';
+  @import '@fontsource/playfair-display/600.css';
+  @import '@fontsource/playfair-display/700.css';
+  @import '@fontsource/dm-sans/400.css';
+  @import '@fontsource/dm-sans/500.css';
+  @import '@fontsource/dm-sans/600.css';
+  @import '@fontsource/dm-sans/700.css';
+
   :root {
     /* Primary - Deep Navy Blue */
     --primary: 220 60% 20%;
@@ -26,13 +26,8 @@
     --yellow-light: 45 100% 70%;
     --yellow-dark: 45 100% 42%;
     
-<<<<<<< HEAD
-    /* Background & Surfaces */
-    --background: 45 30% 98%;
-=======
     /* Background & Surfaces - Light Sky Blue tint */
     --background: 199 50% 97%;
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
     --foreground: 220 40% 15%;
     
     --card: 0 0% 100%;
@@ -142,10 +137,6 @@
     @apply border-border;
   }
 
-<<<<<<< HEAD
-  body {
-    @apply bg-background text-foreground font-sans antialiased;
-=======
   html {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
@@ -161,7 +152,6 @@
     @apply bg-background text-foreground font-sans antialiased;
     min-height: 100vh;
     min-height: -webkit-fill-available;
->>>>>>> 98271f71a22a8faca0d2bd1b328d48a7f7b2bf44
   }
 
   h1, h2, h3, h4, h5, h6 {
