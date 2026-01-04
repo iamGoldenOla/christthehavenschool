@@ -2,14 +2,31 @@
   RewriteEngine On
   RewriteBase /
 
-  # Don't rewrite actual files or directories
+  # Conditions: Don't rewrite if it's a real file or directory
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+
+  # Don't rewrite common file extensions
+  RewriteCond %{REQUEST_URI} !\.css$
+  RewriteCond %{REQUEST_URI} !\.js$
+  RewriteCond %{REQUEST_URI} !\.jpg$
+  RewriteCond %{REQUEST_URI} !\.jpeg$
+  RewriteCond %{REQUEST_URI} !\.png$
+  RewriteCond %{REQUEST_URI} !\.gif$
+  RewriteCond %{REQUEST_URI} !\.svg$
+  RewriteCond %{REQUEST_URI} !\.webp$
+  RewriteCond %{REQUEST_URI} !\.ico$
+  RewriteCond %{REQUEST_URI} !\.woff$
+  RewriteCond %{REQUEST_URI} !\.woff2$
+  RewriteCond %{REQUEST_URI} !\.ttf$
+  RewriteCond %{REQUEST_URI} !\.eot$
   
-  # Exclude assets folder
+  # Don't rewrite specific paths
   RewriteCond %{REQUEST_URI} !^/assets/
-  RewriteCond %{REQUEST_URI} !^/robots.txt
-  RewriteCond %{REQUEST_URI} !^/favicon.ico
+  RewriteCond %{REQUEST_URI} !^/images/
+  RewriteCond %{REQUEST_URI} !^/public/
+  RewriteCond %{REQUEST_URI} !^/api/
   
   # Rewrite everything else to index.html for React Router
   RewriteRule ^ /index.html [QSA,L]
