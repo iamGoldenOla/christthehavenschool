@@ -26,8 +26,8 @@
     --yellow-light: 45 100% 70%;
     --yellow-dark: 45 100% 42%;
     
-    /* Background & Surfaces - Light Sky Blue tint */
-    --background: 199 50% 97%;
+    /* Background & Surfaces - Light Sky Blue tint with mild dark overlay */
+    --background: 199 30% 93%;
     --foreground: 220 40% 15%;
     
     --card: 0 0% 100%;
@@ -152,6 +152,19 @@
     @apply bg-background text-foreground font-sans antialiased;
     min-height: 100vh;
     min-height: -webkit-fill-available;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.03);
+    pointer-events: none;
+    z-index: 0;
   }
 
   h1, h2, h3, h4, h5, h6 {
