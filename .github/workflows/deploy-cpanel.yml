@@ -42,6 +42,6 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: ${{ secrets.FTP_DIR }}  # Path for frontend files
         local-dir: ./dist/
-        port: 21
+        port: ${{ secrets.FTP_PORT }}
         # Enable logging to help debug
         log-level: verbose
